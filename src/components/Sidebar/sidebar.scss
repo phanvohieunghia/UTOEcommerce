@@ -1,0 +1,52 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    display: flex;
+    padding: 10px 0 10px 5px;
+    align-items: center;
+  }
+  &__logo {
+
+  }
+  &__logo img {
+    height: 25px;
+  }
+  &__text {
+    padding-left: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}
+.featurecategory {
+  border-top: 1px solid #ccc;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.fc {
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+  }
+  &__logo {
+
+  }
+  &__logo img {
+    height: 30px;
+  }
+  &__text {
+    padding-left: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}

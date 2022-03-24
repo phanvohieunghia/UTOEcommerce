@@ -7,10 +7,10 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <div className="main" style={{marginTop: "80px"}} >
+      <div className="main" style={{marginTop: "73px"}} >
         <div className="container">
           <div className="row">
-            <div className="col-2">
+            <div className="col-3">
               <Sidebar />
             </div>
             <div className="col">

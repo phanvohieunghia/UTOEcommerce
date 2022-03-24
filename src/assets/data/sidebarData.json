@@ -1,0 +1,49 @@
+{
+  "sidebar": [
+    {
+      "img": "left menu image 1.png",
+      "text": "Về chúng tôi"
+    },
+    {
+      "img": "left menu image 2.png",
+      "text": "Đào tạo"
+    },
+    {
+      "img": "left menu image 3.png",
+      "text": "Cộng đồng"
+    },
+    {
+      "img": "left menu image 4.png",
+      "text": "Sàn thương mại"
+    },
+    {
+      "img": "left menu image 5.png",
+      "text": "Dịch vụ"
+    },
+    {
+      "img": "left menu image 6.png",
+      "text": "Tin tức"
+    },
+    {
+      "img": "left menu image 7.png",
+      "text": "Liên hệ"
+    }
+  ],
+  "featuredcategory": {
+    "title": "Danh mục nổi bật",
+    "content": [
+      {
+        "img": "x",
+        "text": "Thể Thao & Dã Ngoại"
+      },
+      {
+        "img": "x",
+        "text": "Nhà cửa  & Đời Sống"
+      },
+      {
+        "img": "x",
+        "text": "Thực Phẩm & Đồ Uống"
+      }
+    ]
+  }
+}
