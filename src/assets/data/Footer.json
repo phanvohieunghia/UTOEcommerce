@@ -1,0 +1,29 @@
+{
+    "title1" : "Hỗ trợ",
+    "content": [
+        "Chính sách trả hàng",
+        "Điều khoản dịch vụ",
+        "Điều khoản dịch vụ mua bán UTO",
+        "Danh mục yêu cầu hồ sơ pháp lý Nhà bán & Hàng hóa",
+        "Chính sách vận chuyển"
+    ],
+    "title2": "Chúng tôi trên mạng xã hội",
+    "img": [
+        "facebook icon.png",
+        "youtube icon.png",
+        "zalo icon.png",
+        "tiktok icon.png"
+    ],
+    "downloadImg": [
+        "google play.png",
+        "app store.png"
+    ],
+    "support": {
+        "img": "support icon.png",
+        "title": "Tổng đài hỗ trợ 24/7",
+        "phone": "1900 88 66 33"
+    },
+    "description": "Đăng ký để cập nhật thton tin mới nhất về các chương trình khuyến mãi và nhận được voucher hấp dẫn",
+    "copyright": "2022 UTO",
+    "slogan": "Nâng tầm thương hiệu của bạn"
+}
