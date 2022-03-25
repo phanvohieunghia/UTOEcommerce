@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import "./_header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,33 +28,33 @@ const Header = () => {
           </div>
           <div className="hd-main col-md">
             {/* Đào tạo */}
-            <div className="hd-main__item">
+            <Link to="/education" className="hd-main__item">
               <div className="hd-main__logo">
                 <FontAwesomeIcon icon={faGraduationCap} />
               </div>
               <div className="hd-main__text">Đào tạo</div>
-            </div>
+            </Link>
             {/* Cộng đồng */}
-            <div className="hd-main__item">
+            <Link to="/community" className="hd-main__item">
               <div className="hd-main__logo">
                 <FontAwesomeIcon icon={faUsers} />
               </div>
               <div className="hd-main__text">Cộng đồng</div>
-            </div>
+            </Link>
             {/* Sản thương mại */}
-            <div className="hd-main__item">
+            <Link to="/" className="hd-main__item">
               <div className="hd-main__logo">
                 <FontAwesomeIcon icon={faCartPlus} />
               </div>
               <div className="hd-main__text">Sản thương mại</div>
-            </div>
+            </Link>
             {/* Dịch vụ */}
-            <div className="hd-main__item">
+            <Link to="/services" className="hd-main__item">
               <div className="hd-main__logo">
                 <FontAwesomeIcon icon={faPuzzlePiece} />
               </div>
               <div className="hd-main__text">Dịch vụ</div>
-            </div>
+            </Link>
           </div>
           <div className="hd-right col-md-3">
             {/* Search */}

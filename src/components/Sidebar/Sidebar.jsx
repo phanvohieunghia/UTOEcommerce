@@ -28,7 +28,7 @@ const Sidebar = () => {
           return (
             <div className="fc__item">
               <div className="fc__logo">
-                <img src="/img/left menu image (14).png" alt="error png" />
+                <img src={"/img/sidebar/" + data.img} alt="error png" />
               </div>
               <div className="fc__text">
                 {data.text}

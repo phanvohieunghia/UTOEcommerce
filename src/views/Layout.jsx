@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header/Header'
 import Sidebar from '../components/Sidebar/Sidebar'
 import FeaturedMember from '../components/FeaturedMember/FeaturedMember'
+import Routers from '../router/Routers'
 
 const Layout = () => {
   return (
@@ -14,9 +15,9 @@ const Layout = () => {
               <Sidebar />
             </div>
             <div className="col">
-              Content
+              <Routers />
             </div>
-            <div className="col-2">
+            <div className="col-3">
               <FeaturedMember />
             </div>
           </div>

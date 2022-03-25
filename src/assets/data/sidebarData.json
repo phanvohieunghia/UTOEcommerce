@@ -33,16 +33,16 @@
     "title": "Danh mục nổi bật",
     "content": [
       {
-        "img": "x",
-        "text": "Thể Thao & Dã Ngoại"
+        "img": "featuredCategory 1.png",
+        "text": "Thể Thao & Dã Ngoại (1)"
       },
       {
-        "img": "x",
-        "text": "Nhà cửa  & Đời Sống"
+        "img": "featuredCategory 2.png",
+        "text": "Nhà cửa  & Đời Sống (1)"
       },
       {
-        "img": "x",
-        "text": "Thực Phẩm & Đồ Uống"
+        "img": "featuredCategory 3.png",
+        "text": "Thực Phẩm & Đồ Uống (2)"
       }
     ]
   }
