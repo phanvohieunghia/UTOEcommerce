@@ -14,7 +14,7 @@ const Layout = () => {
             <div className="col-3">
               <Sidebar />
             </div>
-            <div className="col">
+            <div className="col-6">
               <Routers />
             </div>
             <div className="col-3">
