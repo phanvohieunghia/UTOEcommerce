@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import "./_header.scss";
+import "./header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGraduationCap,

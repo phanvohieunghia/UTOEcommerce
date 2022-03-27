@@ -1,16 +1,59 @@
-.hp-main {
+@import '../assets/sass/valuable';
+
+.frame {
 	padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-  border-radius: 6px;
-  margin-bottom: 15px;
+	background-color: #fff;
+	box-shadow: $box-shadow-type;
+	border-radius: 6px;
+	margin-bottom: 15px;
 	&__title {
 		border-left: 5px solid #0056b3;
-		// color: rgb(80 181 255 / 80%);
-		font-size: 1rem;
+		font-size: 1.6rem;
 		font-weight: 600;
 		padding-left: 15px;
 		margin-bottom: 10px;
+	}
+}
+.slider {
+	margin-bottom: 16px;
+}
+.slider2 {
+	&__title {
+		border-color: #FF0000;
+	}
+	&__content {
+		width: 100%;
+		border-radius: 8px;
+		box-shadow: $box-shadow-type;
+		margin: 4px 4px 16px;
+	}
+	&__img {
+		padding-top: 65%;
+		position: relative;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			border-top-right-radius: 8px;
+			border-top-left-radius: 8px;
+		}
+	}
+	&__name {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 4px;
+		font-size: 1.28rem;
+		font-weight: 600;
+		height: calc(1.28rem * 2 * 1.5);
+	}
+
+}
+.hp-main {
+	&__title {
 	}
 	& .container {
 		padding: 7px;

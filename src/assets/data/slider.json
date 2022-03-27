@@ -1,0 +1,45 @@
+{
+  "slider1": [
+    "banner 1",
+    "banner 2",
+    "banner 3"
+  ],
+  "slider2": [
+    {
+      "name": "Cửa hàng máy tính",
+      "img": "slider2 1"
+    },
+    {
+      "name": "Cửa hàng Pro9x",
+      "img": "slider2 2"
+    },
+    {
+      "name": "Hàng xách tay Made In The USA",
+      "img": "slider2 3"
+    },
+    {
+      "name": "Kiều Anh Tài",
+      "img": "slider2 4"
+    },
+    {
+      "name": "Nhân Sâm Hàn Quốc",
+      "img": "slider2 5"
+    },
+    {
+      "name": "shopmypham",
+      "img": "slider2 6"
+    },
+    {
+      "name": "Siêu thị online 123sale.net",
+      "img": "slider2 7"
+    },
+    {
+      "name": "Uniehouse - Chuyên làm đẹp",
+      "img": "slider2 8"
+    },
+    {
+      "name": "VÂN LEE - Chuyên sỉ, lẻ, hàng chất lượng, giá rẻ",
+      "img": "slider2 9"
+    }
+  ]
+}

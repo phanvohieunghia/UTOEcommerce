@@ -1,5 +1,6 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
+import { Swiper } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -10,33 +11,26 @@ import "./slider.scss";
 // import required modules
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 
-export default function App(data) {
+export default function App({ _slides = 1, _effect, callback = () => {} }) {
   return (
     <>
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        spaceBetween={30}
-        effect={"fade"}
+        spaceBetween={20}
+        effect={_effect === undefined ? "" : _effect}
+        slidesPerView={3}
         // centeredSlides={true}
         loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         scrollbar={{ draggable: true }}
         pagination={false}
         navigation={false}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="/img/Ecommerce/slider/banner 1.jpg" alt="error png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/Ecommerce/slider/banner 2.jpg" alt="error png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/img/Ecommerce/slider/banner 3.jpg" alt="error png" />
-        </SwiperSlide>
+        {callback()}
       </Swiper>
     </>
   );

@@ -9,7 +9,7 @@ import CommunityPage from '../views/CommunityPage'
 const Routers = () => {
   return (
     <Routes>
-      <Route path="/"  exact element={<HomePage />} />
+      <Route path="/" exact element={<HomePage />} />
       <Route path="/education" element={<EducationPage />} />
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/services" element={<ServicesPage />} />

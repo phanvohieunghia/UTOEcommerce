@@ -11,13 +11,13 @@ const Layout = () => {
       <div className="main" style={{marginTop: "73px"}} >
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-2">
               <Sidebar />
             </div>
-            <div className="col-6">
+            <div className="col-8">
               <Routers />
             </div>
-            <div className="col-3">
+            <div className="col-2">
               <FeaturedMember />
             </div>
           </div>

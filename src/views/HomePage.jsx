@@ -1,60 +1,29 @@
-<<<<<<< HEAD
-import React from 'react'
-import Slider from '../components/Slider/Slider'
-=======
 import React from "react";
+import { SwiperSlide } from "swiper/react";
 
 import Footer from "../components/Footer/Footer";
-import "./homepage.scss";
 import Item from "../components/Item/Item";
+import Slider from "../components/Slider/Slider";
+import "./homepage.scss";
 import dataList from "../assets/data/NewProduct.json";
->>>>>>> 4b7aef217d190dc4336b8a3206e85df5655ff645
+import sliderData from "../assets/data/slider.json";
 
 const HomePage = () => {
-  const renderRow1 = () => {
-    return (
-      <div className="x__item">
-        <div className="x__img">
-          <img src="x" alt="error png" />
-        </div>
-        <div className="x__text">
-          Cửa hàng máy tính
-        </div>
-      </div>
-    )
-  }
   return (
-<<<<<<< HEAD
-    <div className="homepage">
-      <Slider />
-      <div className="row hp-row1">
-        <div className="hp-row1__title">
-          CỬA HÀNG UY TÍN
-        </div>
-        <div className="hp-row2__content">
-          <Slider />
-        </div>
-      </div>
-      <div className="row hp-row2">
-
-      </div>
-      <div className="row hp-row3">
-
-      </div>
-      <div className="row hp-row4">
-
-      </div>
-      <div className="row hp-row5">
-
-      </div>
-      
-    </div>
-  )
-}
-=======
     <>
-      <section className="hp-main">
-        <div className="hp-main__title">MẶT HÀNG MỚI</div>
+      <section className="slider">
+        <Slider _slides={1} _effect={"fade"} callback={renderSlider1Item} />
+      </section>
+      <section className="slider2 frame">
+        <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
+        <div className="x">
+          <div className="x">
+            <Slider _slides={3} callback={renderSlider2ITem} />
+          </div>
+        </div>
+      </section>
+      <section className="hp-main frame">
+        <div className="frame__title">MẶT HÀNG MỚI</div>
         <div className="container">
           <div className="row">
             {dataList.map((data, i) => {
@@ -76,6 +45,48 @@ const HomePage = () => {
     </>
   );
 };
->>>>>>> 4b7aef217d190dc4336b8a3206e85df5655ff645
+
+const renderSlider1Item = () => {
+  return (
+    <>
+      {sliderData.slider1.map((data, i) => {
+        return (
+          <>
+            <SwiperSlide>
+              <img
+                src={"/img/Ecommerce/slider/" + data + ".jpg"}
+                alt="error png"
+              />
+            </SwiperSlide>
+          </>
+        );
+      })}
+    </>
+  );
+};
+
+const Slider2Item = ({ name, img }) => {
+  return (
+    <div className="slider2__content">
+      <div className="slider2__img">
+        <img src={"/img/Ecommerce/slider2/" + img + ".png"} alt="error png" />
+      </div>
+      <div className="slider2__name">{name}</div>
+    </div>
+  );
+};
+const renderSlider2ITem = () => {
+  return (
+    <>
+      {sliderData.slider2.map((data, i) => {
+        return (
+          <SwiperSlide>
+            <Slider2Item name={data.name} img={data.img} />
+          </SwiperSlide>
+        );
+      })}
+    </>
+  );
+};
 
 export default HomePage;
