@@ -16,9 +16,27 @@ const HomePage = () => {
       </section>
       <section className="slider2 frame">
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
-        <div className="x">
-          <div className="x">
-            <Slider _slides={3} callback={renderSlider2ITem} />
+        <Slider _slides={3} callback={renderSlider2ITem} />
+      </section>
+      <section className="flashsale frame">
+        <div className="frame__title flashsale__title">
+          <div className="flashsale__title-left">FLASH SALE</div>
+          <div className="flashsale__title-right">Xem thêm</div>
+        </div>
+        <div className="container">
+          <div className="row">
+            {dataList.map((data, i) => {
+              return (
+                <div className="col-4">
+                  <Item
+                    img={data.img}
+                    name={data.name}
+                    price={data.price}
+                    address={data.address}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

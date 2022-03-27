@@ -53,10 +53,29 @@
 
 }
 .hp-main {
+	& .container {
+		padding: 7px;
+		padding-bottom: 0;
+		& .row > div {
+			padding: 0 5px 10px 5px;
+		}
+	}
+}
+.flashsale {
 	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: none;
+		&-left {
+			font-size: 2rem;
+			padding-left: 35px;
+			background: url('../../public/img/ic_flash1.png') no-repeat left center / contain;
+		}
 	}
 	& .container {
 		padding: 7px;
+		padding-bottom: 0;
 		& .row > div {
 			padding: 0 5px 10px 5px;
 		}
