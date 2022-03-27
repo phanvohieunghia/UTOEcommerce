@@ -12,12 +12,13 @@ const HomePage = () => {
   return (
     <>
       <section className="slider">
-        <Slider _slides={1} _effect={"fade"} callback={renderSlider1Item} />
+        <Slider _effect={"fade"} callback={renderSlider1Item} />
       </section>
       <section className="slider2 frame">
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
         <Slider _slides={3} callback={renderSlider2ITem} />
       </section>
+      {/* FLASH SALE */}
       <section className="flashsale frame">
         <div className="frame__title flashsale__title">
           <div className="flashsale__title-left">FLASH SALE</div>
@@ -40,6 +41,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* MẶT HÀNG MỚI */}
       <section className="hp-main frame">
         <div className="frame__title">MẶT HÀNG MỚI</div>
         <div className="container">
@@ -56,6 +58,30 @@ const HomePage = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+      <section className="banner">
+        <img src="/img/Ecommerce/banner/banner 1.jpg" alt="error png" />
+        <img src="/img/Ecommerce/banner/banner 2.jpg" alt="error png" />
+      </section>
+      {/* DÀNH RIÊNG CHO BẠN */}
+      <section className="personalForYou frame">
+      <div className="frame__title personalForYou__title">DÀNH RIÊNG CHO BẠN</div>
+      <div className="container">
+          <div className="row">
+            {dataList.map((data, i) => {
+                return (
+                  <div className="col-4">
+                    <Item
+                      img={data.img}
+                      name={data.name}
+                      price={data.price}
+                      address={data.address}
+                    />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </section>

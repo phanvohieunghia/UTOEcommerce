@@ -1,8 +1,31 @@
 import React from 'react'
+import { SwiperSlide } from 'swiper/react'
+
+import Footer from '../components/Footer/Footer'
+import Slider from '../components/Slider/Slider'
+import sliderData from '../assets/data/slider.json'
 
 const EducationPage = () => {
   return (
-    <div>EducationPage</div>
+    <>
+      <section className="banner">
+        <Slider _effect= {"fade"} callback={SliderItem} />
+      </section>
+      <Footer />
+    </>
+  )
+}
+const SliderItem = () => {
+  return (
+    <>
+      {sliderData.educationSlider.map((data, i) => {
+        return (
+          <SwiperSlide>
+            <img src={"/img/Education/slider/" + data + ".jpg"} alt="error png" />
+          </SwiperSlide>
+        )
+      })}
+    </>
   )
 }
 

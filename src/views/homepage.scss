@@ -52,15 +52,6 @@
 	}
 
 }
-.hp-main {
-	& .container {
-		padding: 7px;
-		padding-bottom: 0;
-		& .row > div {
-			padding: 0 5px 10px 5px;
-		}
-	}
-}
 .flashsale {
 	&__title {
 		display: flex;
@@ -79,5 +70,26 @@
 		& .row > div {
 			padding: 0 5px 10px 5px;
 		}
+	}
+}
+.hp-main {
+	& .container {
+		padding: 7px;
+		padding-bottom: 0;
+		& .row > div {
+			padding: 0 5px 10px 5px;
+		}
+	}
+}
+.banner {
+	& img {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+}
+.personalForYou {
+	&__title {
+		border-color: #FF0000;
 	}
 }
