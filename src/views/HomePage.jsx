@@ -1,18 +1,18 @@
-import React from "react";
-import { SwiperSlide } from "swiper/react";
+import React from 'react';
+import { SwiperSlide } from 'swiper/react';
 
-import Footer from "../components/Footer/Footer";
-import Item from "../components/Item/Item";
-import Slider from "../components/Slider/Slider";
-import "./homepage.scss";
-import dataList from "../assets/data/NewProduct.json";
-import sliderData from "../assets/data/slider.json";
+import Footer from '../components/Footer/Footer';
+import { Item1 } from '../components/Item/Item';
+import Slider from '../components/Slider/Slider';
+import './homepage.scss';
+import dataList from '../assets/data/NewProduct.json';
+import sliderData from '../assets/data/slider.json';
 
 const HomePage = () => {
   return (
     <main id="homepage">
       <section className="slider">
-        <Slider _effect={"fade"} callback={renderSlider1Item} />
+        <Slider _effect={'fade'} callback={renderSlider1Item} />
       </section>
       <section className="slider2 frame">
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
@@ -29,7 +29,7 @@ const HomePage = () => {
             {dataList.map((data, i) => {
               return (
                 <div className="col-4">
-                  <Item
+                  <Item1
                     img={data.img}
                     name={data.name}
                     price={data.price}
@@ -49,7 +49,7 @@ const HomePage = () => {
             {dataList.map((data, i) => {
               return (
                 <div className="col-4">
-                  <Item
+                  <Item1
                     img={data.img}
                     name={data.name}
                     price={data.price}
@@ -67,21 +67,23 @@ const HomePage = () => {
       </section>
       {/* DÀNH RIÊNG CHO BẠN */}
       <section className="personalForYou frame">
-      <div className="frame__title personalForYou__title">DÀNH RIÊNG CHO BẠN</div>
-      <div className="container">
+        <div className="frame__title personalForYou__title">
+          DÀNH RIÊNG CHO BẠN
+        </div>
+        <div className="container">
           <div className="row">
             {dataList.map((data, i) => {
-                return (
-                  <div className="col-4">
-                    <Item
-                      img={data.img}
-                      name={data.name}
-                      price={data.price}
-                      address={data.address}
-                    />
-                  </div>
-                );
-              })}
+              return (
+                <div className="col-4">
+                  <Item1
+                    img={data.img}
+                    name={data.name}
+                    price={data.price}
+                    address={data.address}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -98,7 +100,7 @@ const renderSlider1Item = () => {
           <>
             <SwiperSlide>
               <img
-                src={"/img/Ecommerce/slider/" + data + ".jpg"}
+                src={'/img/Ecommerce/slider/' + data + '.jpg'}
                 alt="error png"
               />
             </SwiperSlide>
@@ -113,7 +115,10 @@ const Slider2Item = ({ name, img }) => {
   return (
     <div className="slider2__content">
       <div className="slider2__img">
-        <img src={"/img/Ecommerce/slider2/" + img + ".png"} alt="error png" />
+        <img
+          src={'/img/Ecommerce/slider2/' + img + '.png'}
+          alt="error png"
+        />
       </div>
       <div className="slider2__name">{name}</div>
     </div>
