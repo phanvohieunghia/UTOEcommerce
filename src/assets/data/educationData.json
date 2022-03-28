@@ -1,0 +1,74 @@
+{
+  "eduLink": [
+    {
+      "title": "Kho liệu trình UTO",
+      "img": "education_link_img_1"
+    },
+    {
+      "title": "Thư viện video",
+      "img": "education_link_img_2"
+    },
+    {
+      "title": "Thư viện hình ảnh",
+      "img": "education_link_img_3"
+    },
+    {
+      "title": "Các khoá học chuyên sâu",
+      "img": "education_link_img_4"
+    },
+    {
+      "title": "Kết nối chuyên gia",
+      "img": "education_link_img_5"
+    },
+    {
+      "title": "Kết nối chuyên gia",
+      "img": "education_link_img_6"
+    }
+  ],
+  "eduVideo": [
+    {
+      "title": "Tổng quan về ...",
+      "path": "https://odysee.com/$/embed/HDSD_UTO_final/7fa7067adf5dbac1db9da16fcb5eaa5b938e8495?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Hướng dẫn sử dụng ...",
+      "path": "https://odysee.com/$/embed/T%E1%BB%95ng-quan-v%E1%BB%81-UTO/9c49f79e16ded769ce7b07811f60fac140abf436?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Hướng dẫn đăng nhập ...",
+      "path": "https://odysee.com/$/embed/video-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-%C4%91%C4%83ng-k%C3%AD-tk-UTO/28242317e5862ad5e41bf9461f65e683e28dfa05?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Hướng dẫn kích hoạt ...",
+      "path": "https://odysee.com/$/embed/H%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-k%C3%ADch-ho%E1%BA%A1t-combo-g%C3%B3i-2828_2/7b4090b2ec7a24f29900033fd3025a4cad03f793?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Hướng dẫn đăng gì đó ...",
+      "path": "https://odysee.com/$/embed/video-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-%C4%91%C4%83ng-k%C3%AD-tk-UTOpost/bd40612bb3a6f029f301a87982dfe48fc9439a25?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Hướng dẫn đăng gì đó 2 ...",
+      "path": "https://odysee.com/$/embed/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-%C4%91%C4%83ng-k%C3%AD/c1965cf737b09fc1c40a404eb21875e6c3dfeb1a?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Cách thay đổi ...",
+      "path": "https://odysee.com/$/embed/H%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-thay-%C4%91%E1%BB%95i-t%C3%AAn-mi%E1%BB%81nn/936787b3fff0b9f1d3beb9d32b3dd0656406cbb4?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "CHIẾN LƯỢC T...",
+      "path": "https://odysee.com/$/embed/CHI%E1%BA%BEN-L%C6%AF%E1%BB%A2C-TR%E1%BB%9E-TH%C3%80NH-VUA-B%C3%81N-L%E1%BA%BA--UTO_123SALE/100b955e2b3b9dc886b8690e078d8755376f0910?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "NGHỆ THUẬT ...",
+      "path": "https://odysee.com/$/embed/NGH%E1%BB%86-THU%E1%BA%ACT-CH%E1%BB%90T-SALE-%C4%90%E1%BB%88NH-CAO-KHI%E1%BA%BEN-KH%C3%81CH-H%C3%80NG-KH%C3%94NG-TH%E1%BB%82-T%E1%BB%AA-CH%E1%BB%90I_-UTO_123SALE/6a0cca3d9edce4574c6ec5e236f29fd41e2f2592?r=FvkBieGotKSRMFaDQ7PaVhVA22ixejgV"
+    },
+    {
+      "title": "Phóng sự STARTUP ...",
+      "path": "https://www.youtube.com/embed/R9jaKsPms_k"
+    },
+    {
+      "title": "BÍ MẬT KHỞI NGHIỆP ...",
+      "path": "https://www.youtube.com/embed/arufG1XZWxc"
+    }
+  ]
+}

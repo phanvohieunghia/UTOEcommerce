@@ -11,7 +11,8 @@ import "./slider.scss";
 // import required modules
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 
-export default function App({ _slides = 1, _effect, callback = () => {} }) {
+export default function App({ _slides = 1, _effect, callback = () => {}, _pagination = false}) {
+  console.log(_pagination)
   return (
     <>
       <Swiper
@@ -21,13 +22,13 @@ export default function App({ _slides = 1, _effect, callback = () => {} }) {
         slidesPerView={_slides}
         // centeredSlides={true}
         loop={true}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         scrollbar={{ draggable: true }}
         pagination={false}
-        navigation={false}
+        navigation={_pagination}
         className="mySwiper"
       >
         {callback()}
