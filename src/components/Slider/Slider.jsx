@@ -18,7 +18,7 @@ export default function App({ _slides = 1, _effect, callback = () => {} }) {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         spaceBetween={20}
         effect={_effect === undefined ? "" : _effect}
-        slidesPerView={3}
+        slidesPerView={_slides}
         // centeredSlides={true}
         loop={true}
         // autoplay={{

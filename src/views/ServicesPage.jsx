@@ -4,7 +4,7 @@ import './servicespage.scss'
 
 const ServicesPage = () => {
   return (
-    <>
+    <main id="servicespage">
       <section className="sv-main frame">
         <div className="container">
           <div className="row">
@@ -13,7 +13,7 @@ const ServicesPage = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </main>
   )
 }
 

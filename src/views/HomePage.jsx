@@ -10,7 +10,7 @@ import sliderData from "../assets/data/slider.json";
 
 const HomePage = () => {
   return (
-    <>
+    <main id="homepage">
       <section className="slider">
         <Slider _effect={"fade"} callback={renderSlider1Item} />
       </section>
@@ -86,7 +86,7 @@ const HomePage = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </main>
   );
 };
 
