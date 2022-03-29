@@ -106,10 +106,62 @@ const FormatPrice = ({ price = 0 }) => {
     price > 1000000,
   )}${group(unitPrice, price > 1000, true)}`;
 };
+const Item4 = ({
+  avatarUser,
+  nameUser,
+  dateToNow,
+  titlePost,
+  contentPost,
+  imgPost,
+  likeQuantity,
+  commentQuantity,
+  shareQuantity,
+  commentList,
+}) => {
+  return (
+    <div className="item4">
+      <div className="item4-head">
+        <div className="item4-head__avatarUser">{avatarUser}</div>
+        <div className="item4-head-right">
+          <div className="item4-head-right__name">{nameUser}</div>
+          <div className="item4-head-right__dateToNow">{dateToNow}</div>
+        </div>
+      </div>
+      <div className="item4__titlePost">{titlePost}</div>
+      <div className="item4__contentPost">{contentPost}</div>
+      <div className="item4__imgPost">
+        <img src={'/img/Community/' + imgPost + '.png'} alt="error png" />
+      </div>
+      <div className="item4-contact">
+        <div className="item4-contact__like">
+          <span>{likeQuantity}</span> lượt thích
+        </div>
+        <div className="item4-contact-right">
+          <div className="item4-contact-right__comment">
+            <span>{commentQuantity}</span> bình luận
+          </div>
+          <div className="item4-contact-right__share">
+            <span>{shareQuantity}</span> lượt chia sẻ
+          </div>
+        </div>
+      </div>
+      <div className="item4-btn">
+        <div className="item4-btn__like">Thích</div>
+        <div className="item4-btn__comment">Bình luận</div>
+        <div className="item4-btn__share">Chia sẻ</div>
+      </div>
+      <div className="item4-commentFrame">
+        <input type="text" placeholder="Viết bình luận..." />
+      </div>
+      {/* Comment List */}
+    </div>
+  );
+};
 const Items = {
   Item1,
   Item2,
   Item3,
+  Item4,
 };
 
 export default Items;

@@ -36,9 +36,9 @@ const EducationPage = () => {
           </div>
         </div>
       </section>
-      {/* <section className="edu-video frame">
+      <section className="edu-video frame">
         <Slider _slides={2} callback={Slider2Item} _pagination={true} />
-      </section> */}
+      </section>
       <section className="course frame">
         <div className="course__title">Khoá học nổi bật</div>
         <div className="container">
