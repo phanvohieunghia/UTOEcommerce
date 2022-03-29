@@ -2,7 +2,7 @@ import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 
 import Footer from '../components/Footer/Footer';
-import { Item1 } from '../components/Item/Item';
+import Items from '../components/Item/Item';
 import Slider from '../components/Slider/Slider';
 import './homepage.scss';
 import dataList from '../assets/data/NewProduct.json';
@@ -29,7 +29,7 @@ const HomePage = () => {
             {dataList.map((data, i) => {
               return (
                 <div className="col-4">
-                  <Item1
+                  <Items.Item1
                     img={data.img}
                     name={data.name}
                     price={data.price}
@@ -49,7 +49,7 @@ const HomePage = () => {
             {dataList.map((data, i) => {
               return (
                 <div className="col-4">
-                  <Item1
+                  <Items.Item1
                     img={data.img}
                     name={data.name}
                     price={data.price}
@@ -75,7 +75,7 @@ const HomePage = () => {
             {dataList.map((data, i) => {
               return (
                 <div className="col-4">
-                  <Item1
+                  <Items.Item1
                     img={data.img}
                     name={data.name}
                     price={data.price}

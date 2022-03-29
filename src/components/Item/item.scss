@@ -33,7 +33,7 @@
     color: #b53d3c;
     font-size: 2rem;
     font-weight: 600;
-    & span {
+    span {
       text-decoration: underline;
     }
   }
@@ -46,12 +46,86 @@
         font-size: 1rem;
         color: #faca51;
       }
-      & span {
+      span {
         color: unset;
       }
     }
     &-address {
       font-size: 1rem;
     }
+  }
+}
+.item2 {
+  &__img {
+    position: relative;
+    padding-top: 65%;
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // object-fit: cover;
+    }
+  }
+  &__content {
+    padding: 6px;
+  }
+  &__name {
+    margin-bottom: 8px;
+    // text-transform: uppercase;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    // line-height: 25px;
+    -webkit-line-clamp: 2;
+    // height: 50px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: calc(1.6rem * 2 * 1.5);
+  }
+  &__lecturer {
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 1.44rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: calc(1.6rem * 2 * 1.5);
+  }
+  &__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.76rem;
+    color: #ff0000;
+    font-weight: 600;
+    span {
+      font-size: 1.44rem;
+      color: #888;
+      margin-right: 8px;
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+  }
+}
+.item3 {
+  padding: 0 15px;
+  &__img {
+    text-align: center;
+    img {
+      width: 100px;
+      padding: 10px;
+    }
+  }
+  &__name {
+    font-size: 1.76rem;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 1.6rem;
   }
 }

@@ -1,24 +1,28 @@
 // Import Swiper React components
-import React from "react";
-import { Swiper } from "swiper/react";
+import React from 'react';
+import { Swiper } from 'swiper/react';
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import "./slider.scss";
+import './slider.scss';
 // import required modules
-import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
+import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper';
 
-export default function App({ _slides = 1, _effect, callback = () => {}, _pagination = false}) {
-  console.log(_pagination)
+export default function App({
+  _slides = 1,
+  _effect,
+  callback = () => {},
+  _pagination = false,
+}) {
   return (
     <>
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         spaceBetween={20}
-        effect={_effect === undefined ? "" : _effect}
+        effect={_effect === undefined ? '' : _effect}
         slidesPerView={_slides}
         // centeredSlides={true}
         loop={true}

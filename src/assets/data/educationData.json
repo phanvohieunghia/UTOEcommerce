@@ -70,5 +70,57 @@
       "title": "BÍ MẬT KHỞI NGHIỆP ...",
       "path": "https://www.youtube.com/embed/arufG1XZWxc"
     }
+  ],
+  "course": [
+    {
+      "img": "course 1",
+      "name": "NHẬT KÝ 21 NGÀY THÀNH CÔNG TÔI VÀ KEN",
+      "lecturer": "Ken Bay",
+      "discount": 0,
+      "price": 3123123
+    },
+    {
+      "img": "course 2",
+      "name": "GIÁO VIÊN MẦM NON HÀNH TRÌNH CHUYỂN ĐỔI HẠNH PHÚC",
+      "lecturer": "Nhóm chuyên gia GD Giáo Viên Mầm Non",
+      "discount": 3000000,
+      "price": 55500012
+    },
+    {
+      "img": "course 3",
+      "name": "KỸ NĂNG COACHING CHO THẦY CÔ VÀ CHA MẸ",
+      "lecturer": "TIẾN SĨ KHIÊM NGUYỄN",
+      "discount": 10000000,
+      "price": 3020001
+    },
+    {
+      "img": "course 4",
+      "name": "GIÁO DỤC STEAM ỨNG DỤNG TRONG TRƯỜNG MẦM NON",
+      "lecturer": "Giảng viên Lê Bích Hồng",
+      "discount": 3000000,
+      "price": 1000123
+    }
+  ],
+  "reason": [
+    {
+      "img": "h5",
+      "name": "Giảng viên uy tín",
+      "description": "Ứng dụng thực tê, bài tập rèn luyện thực hành tạo ra kết quả..."
+    },
+    {
+      "img": "h6",
+      "name": "Thanh toán online",
+      "description": "Được học online"
+    },
+    {
+      "img": "h7",
+      "name": "Học trực tuyến",
+      "description": "Có đội ngũ support kèm cặp hỗ trợ"
+    },
+    {
+      "img": "h8",
+      "name": "Tham dự group",
+      "description": "Cộng đồng khởi nghiệp vàgiaso dục chất lượng"
+    }
   ]
 }
