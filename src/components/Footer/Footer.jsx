@@ -1,8 +1,8 @@
-import React from "react";
-import dataList from "../../assets/data/Footer.json";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import './Footer.scss'
+import React from 'react';
+import dataList from '../../assets/data/Footer.json';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Footer.scss';
 
 const Footer = () => {
   return (
@@ -12,18 +12,18 @@ const Footer = () => {
         <div className="ft__content">
           {dataList.content.map((data, i) => {
             return (
-              <div className="ft__text">
+              <div className="ft__text" key={i}>
                 {data}
               </div>
-            )
+            );
           })}
         </div>
         <div className="ft__title">{dataList.title2}</div>
         <div className="ft__logo">
           {dataList.img.map((data, i) => {
             return (
-              <div className="ft__logo__item">
-                <img src={"/img/footer/" + data} alt="error" />
+              <div className="ft__logo__item" key={i}>
+                <img src={'/img/footer/' + data} alt="error" />
               </div>
             );
           })}
@@ -31,15 +31,15 @@ const Footer = () => {
         <div className="ft__downloadLogo">
           {dataList.downloadImg.map((data, i) => {
             return (
-              <div className="ft__downloadLogo__item">
-                <img src={"/img/footer/" + data} alt="error" />
+              <div className="ft__downloadLogo__item" key={i}>
+                <img src={'/img/footer/' + data} alt="error" />
               </div>
             );
           })}
         </div>
         <div className="ft__support">
           <div className="ft__support__left">
-            <img src={"/img/footer/" + dataList.support.img} alt="error png" />
+            <img src={'/img/footer/' + dataList.support.img} alt="error png" />
           </div>
           <div className="ft__support__right">
             <div className="ft__support__right-title">
@@ -51,7 +51,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="ft__email">
-          <div className="ft__email-description col-7">{dataList.description}</div>
+          <div className="ft__email-description col-7">
+            {dataList.description}
+          </div>
           <div className="ft__email-form col-5">
             <div className="ft__email-form__container">
               <div className="ft__email-form__input">
@@ -65,12 +67,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="ft-copyright">
-        <div className="ft-copyright__text">
-          {dataList.copyright}
-        </div>
-        <div className="ft-copyright__slogan">
-          {dataList.slogan}
-        </div>
+        <div className="ft-copyright__text">{dataList.copyright}</div>
+        <div className="ft-copyright__slogan">{dataList.slogan}</div>
       </div>
     </>
   );

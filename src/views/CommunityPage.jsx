@@ -2,7 +2,7 @@ import React from 'react';
 import Items from '../components/Item/Item';
 import communityData from '../assets/data/communityData.json';
 
-const CommunityPage = ({
+function CommunityPage({
   avatarUser,
   nameUser,
   dateToNow,
@@ -13,12 +13,12 @@ const CommunityPage = ({
   commentQuantity,
   shareQuantity,
   commentList,
-}) => {
+}) {
   return (
     <div className="community">
       {communityData.posts.map((data, i) => {
         return (
-          <section className="frame">
+          <section className="frame" key={i}>
             <Items.Item4
               avatarUser={avatarUser}
               nameUser={nameUser}
@@ -36,6 +36,6 @@ const CommunityPage = ({
       })}
     </div>
   );
-};
+}
 
 export default CommunityPage;

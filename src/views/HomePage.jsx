@@ -28,7 +28,7 @@ const HomePage = () => {
           <div className="row">
             {dataList.map((data, i) => {
               return (
-                <div className="col-4">
+                <div className="col-4" key={i}>
                   <Items.Item1
                     img={data.img}
                     name={data.name}
@@ -48,7 +48,7 @@ const HomePage = () => {
           <div className="row">
             {dataList.map((data, i) => {
               return (
-                <div className="col-4">
+                <div className="col-4" key={i}>
                   <Items.Item1
                     img={data.img}
                     name={data.name}
@@ -74,7 +74,7 @@ const HomePage = () => {
           <div className="row">
             {dataList.map((data, i) => {
               return (
-                <div className="col-4">
+                <div className="col-4" key={i}>
                   <Items.Item1
                     img={data.img}
                     name={data.name}
@@ -97,14 +97,12 @@ const renderSlider1Item = () => {
     <>
       {sliderData.slider1.map((data, i) => {
         return (
-          <>
-            <SwiperSlide>
-              <img
-                src={'/img/Ecommerce/slider/' + data + '.jpg'}
-                alt="error png"
-              />
-            </SwiperSlide>
-          </>
+          <SwiperSlide key={i}>
+            <img
+              src={'/img/Ecommerce/slider/' + data + '.jpg'}
+              alt="error png"
+            />
+          </SwiperSlide>
         );
       })}
     </>
@@ -115,10 +113,7 @@ const Slider2Item = ({ name, img }) => {
   return (
     <div className="slider2__content">
       <div className="slider2__img">
-        <img
-          src={'/img/Ecommerce/slider2/' + img + '.png'}
-          alt="error png"
-        />
+        <img src={'/img/Ecommerce/slider2/' + img + '.png'} alt="error png" />
       </div>
       <div className="slider2__name">{name}</div>
     </div>
@@ -129,7 +124,7 @@ const renderSlider2ITem = () => {
     <>
       {sliderData.slider2.map((data, i) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={i}>
             <Slider2Item name={data.name} img={data.img} />
           </SwiperSlide>
         );

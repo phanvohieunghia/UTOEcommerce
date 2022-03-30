@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from 'react-router-dom'
-import "./header.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGraduationCap,
   faUsers,
@@ -11,8 +11,8 @@ import {
   faShoppingBag,
   faUser,
   faUserCircle,
-  faBars
-} from "@fortawesome/free-solid-svg-icons";
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   return (

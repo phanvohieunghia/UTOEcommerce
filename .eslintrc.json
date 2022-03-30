@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended", "prettier"],
+
+  "rules": {
+    "no-console": "off"
+  },
+  "parser": "babel-eslint",
+  "sourceType": "module",
+  "parserOptions": {
+    // "allowImportExportEverywhere": true,
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}

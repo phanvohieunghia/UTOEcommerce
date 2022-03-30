@@ -20,7 +20,7 @@ const EducationPage = () => {
           <div className="row">
             {educationData.eduLink.map((data, i) => {
               return (
-                <div className="edu-link__item col-6">
+                <div className="edu-link__item col-6" key={i}>
                   <div className="edu-link__container">
                     <div className="edu-link__title">{data.title}</div>
                     <div className="edu-link__img">
@@ -45,7 +45,7 @@ const EducationPage = () => {
           <div className="row">
             {educationData.course.map((data, i) => {
               return (
-                <div className="col-6">
+                <div className="col-6" key={i}>
                   <Items.Item2
                     img={data.img}
                     name={data.name}
@@ -65,7 +65,7 @@ const EducationPage = () => {
           <div className="row">
             {educationData.course.map((data, i) => {
               return (
-                <div className="col-6">
+                <div className="col-6" key={i}>
                   <Items.Item2
                     img={data.img}
                     name={data.name}
@@ -87,7 +87,7 @@ const EducationPage = () => {
           <div className="row">
             {educationData.reason.map((data, i) => {
               return (
-                <div className="col-6">
+                <div className="col-6" key={i}>
                   <Items.Item3
                     img={data.img}
                     name={data.name}
@@ -111,7 +111,7 @@ const SliderItem = () => {
     <>
       {sliderData.educationSlider.map((data, i) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={i}>
             <img
               src={'/img/Education/slider/' + data + '.jpg'}
               alt="error png"
@@ -127,13 +127,9 @@ const Slider2Item = () => {
     <>
       {educationData.eduVideo.map((data, i) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={i}>
             <div className="edu-video__item">
-              <iframe
-                src={data.path}
-                title="x"
-                allowfullscreen=""
-              ></iframe>
+              <iframe src={data.path} title="x" allowFullScreen=""></iframe>
             </div>
           </SwiperSlide>
         );

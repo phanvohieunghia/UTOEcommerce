@@ -6,6 +6,9 @@ import './item.scss';
 
 const Item1 = ({ img, name, price, address }) => {
   const restPrice = price % 1000;
+  const name = 'Joe';
+  name = 'Mary';
+
   return (
     <div className="item1">
       <div className="item1__img">
@@ -38,14 +41,10 @@ const Item1 = ({ img, name, price, address }) => {
   );
 };
 const Item2 = ({ img, name, lecturer, discount, price }) => {
-  // console.log(discount);
   return (
     <div className="item2">
       <div className="item2__img">
-        <img
-          src={'/img/Education/course/' + img + '.jpg'}
-          alt="error png"
-        />
+        <img src={'/img/Education/course/' + img + '.jpg'} alt="error png" />
       </div>
       <div className="item2__content">
         <div className="item2__name">{name}</div>
@@ -70,10 +69,7 @@ const Item3 = ({ img, name, description }) => {
   return (
     <div className="item3">
       <div className="item3__img">
-        <img
-          src={'/img/Education/reason/' + img + '.jpg'}
-          alt="error png"
-        />
+        <img src={'/img/Education/reason/' + img + '.jpg'} alt="error png" />
       </div>
       <div className="item3__name">{name}</div>
       <div className="item3__description">{description}</div>
@@ -83,12 +79,9 @@ const Item3 = ({ img, name, description }) => {
 
 const FormatPrice = ({ price = 0 }) => {
   const millionPrice = Math.floor(price / 1000000);
-  const thousandPrice = Math.floor(
-    (price - millionPrice * 1000000) / 1000,
-  );
+  const thousandPrice = Math.floor((price - millionPrice * 1000000) / 1000);
   const unitPrice = price % 1000;
   const group = (number, isPreGroup = false, isUnit = false) => {
-    console.log(number, '@');
     return isPreGroup
       ? number > 99
         ? number + (!isUnit ? '.' : '')
@@ -97,14 +90,15 @@ const FormatPrice = ({ price = 0 }) => {
         : number > 0
         ? '00' + number + (!isUnit ? '.' : '')
         : '000' + (!isUnit ? '.' : '')
-      : Boolean(number)
+      : number
       ? number + (!isUnit ? '.' : '')
       : '';
   };
-  return `${group(millionPrice)}${group(
-    thousandPrice,
-    price > 1000000,
-  )}${group(unitPrice, price > 1000, true)}`;
+  return (
+    group(millionPrice) +
+    group(thousandPrice, price > 1000000) +
+    group(unitPrice, price > 1000, true)
+  );
 };
 const Item4 = ({
   avatarUser,
