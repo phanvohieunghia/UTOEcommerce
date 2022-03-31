@@ -2,40 +2,29 @@ import React from 'react';
 import Items from '../components/Item/Item';
 import communityData from '../assets/data/communityData.json';
 
-function CommunityPage({
-  avatarUser,
-  nameUser,
-  dateToNow,
-  titlePost,
-  contentPost,
-  imgPost,
-  likeQuantity,
-  commentQuantity,
-  shareQuantity,
-  commentList,
-}) {
+const CommunityPage = () => {
   return (
     <div className="community">
       {communityData.posts.map((data, i) => {
         return (
           <section className="frame" key={i}>
             <Items.Item4
-              avatarUser={avatarUser}
-              nameUser={nameUser}
-              dateToNow={dateToNow}
-              titlePost={titlePost}
-              contentPost={contentPost}
-              imgPost={imgPost}
-              likeQuantity={likeQuantity}
-              commentQuantity={commentQuantity}
-              shareQuantity={shareQuantity}
-              commentList={commentList}
+              avatarUser={data.avatarUser}
+              nameUser={data.nameUser}
+              dateToNow={data.dateToNow}
+              titlePost={data.titlePost}
+              contentPost={data.contentPost}
+              imgPost={data.imgPost}
+              likeQuantity={data.likeQuantity}
+              commentQuantity={data.commentQuantity}
+              shareQuantity={data.shareQuantity}
+              commentList={data.commentList}
             />
           </section>
         );
       })}
     </div>
   );
-}
+};
 
 export default CommunityPage;

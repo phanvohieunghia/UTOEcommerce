@@ -130,3 +130,75 @@
     font-size: 1.6rem;
   }
 }
+.item4 {
+  &-head {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    &__avatarUser {
+      margin-right: 15px;
+      img {
+        $size-img: 60px;
+        width: $size-img;
+        height: $size-img;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      &__name {
+        font-size: 1.44rem;
+        font-weight: 700;
+      }
+      &__dateToNow {
+        font-size: 1.28rem;
+      }
+    }
+  }
+  &__titlePost {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__contentPost {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  &__imgPost {
+    text-align: center;
+    img {
+      width: 80%;
+    }
+  }
+  &-contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1.44rem;
+    margin-bottom: 5px;
+    span {
+      font-weight: 700;
+    }
+    &__like {
+    }
+    &-right {
+      display: flex;
+      &__comment {
+        margin-right: 8px;
+      }
+    }
+  }
+  &-btn {
+    & > div {
+      padding: 6px 14px;
+      font-size: 1.44rem;
+    }
+    display: flex;
+    justify-content: space-around;
+    &__like {
+    }
+  }
+}

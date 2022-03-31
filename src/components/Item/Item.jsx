@@ -1,14 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faStar,
+  faThumbsUp,
+  faComments,
+  faShare,
+} from '@fortawesome/free-solid-svg-icons';
 
 import './item.scss';
 
 const Item1 = ({ img, name, price, address }) => {
   const restPrice = price % 1000;
-  const name = 'Joe';
-  name = 'Mary';
-
   return (
     <div className="item1">
       <div className="item1__img">
@@ -115,7 +117,9 @@ const Item4 = ({
   return (
     <div className="item4">
       <div className="item4-head">
-        <div className="item4-head__avatarUser">{avatarUser}</div>
+        <div className="item4-head__avatarUser">
+          <img src={'/img/Community/' + avatarUser + '.png'} alt="error png" />
+        </div>
         <div className="item4-head-right">
           <div className="item4-head-right__name">{nameUser}</div>
           <div className="item4-head-right__dateToNow">{dateToNow}</div>
@@ -124,18 +128,24 @@ const Item4 = ({
       <div className="item4__titlePost">{titlePost}</div>
       <div className="item4__contentPost">{contentPost}</div>
       <div className="item4__imgPost">
-        <img src={'/img/Community/' + imgPost + '.png'} alt="error png" />
+        <img src={'/img/Community/' + imgPost + '.jpg'} alt="error png" />
       </div>
       <div className="item4-contact">
         <div className="item4-contact__like">
-          <span>{likeQuantity}</span> lượt thích
+          <span>{likeQuantity}</span>
+          <FontAwesomeIcon icon={faThumbsUp} />
+          lượt thích
         </div>
         <div className="item4-contact-right">
           <div className="item4-contact-right__comment">
-            <span>{commentQuantity}</span> bình luận
+            <span>{commentQuantity}</span>
+            <FontAwesomeIcon icon={faComments} />
+            bình luận
           </div>
           <div className="item4-contact-right__share">
-            <span>{shareQuantity}</span> lượt chia sẻ
+            <span>{shareQuantity}</span>
+            <FontAwesomeIcon icon={faShare} />
+            lượt chia sẻ
           </div>
         </div>
       </div>

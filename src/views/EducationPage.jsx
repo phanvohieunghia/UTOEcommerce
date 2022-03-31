@@ -26,7 +26,7 @@ const EducationPage = () => {
                     <div className="edu-link__img">
                       <img
                         src={'/img/Education/eduLink/' + data.img + '.png'}
-                        alt="error"
+                        alt="error png"
                       />
                     </div>
                   </div>
