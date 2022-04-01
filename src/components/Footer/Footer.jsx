@@ -1,7 +1,5 @@
 import React from 'react';
 import dataList from '../../assets/data/Footer.json';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.scss';
 
 const Footer = () => {
@@ -59,9 +57,7 @@ const Footer = () => {
               <div className="ft__email-form__input">
                 <input type="text" placeholder="Nhập email của bạn ..." />
               </div>
-              <div className="ft__email-form__icon">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </div>
+              <div className="ft__email-form__icon"></div>
             </div>
           </div>
         </div>

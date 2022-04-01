@@ -4,7 +4,9 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    // "eslint:recommended", "plugin:react/recommended"
+  ],
   "settings": {
     "react": {
       "version": "detect" // React version, default to the latest React stable releas
@@ -20,11 +22,12 @@
   "plugins": ["react"],
   "rules": {
     "react/react-in-jsx-scope": ["off"],
-    "indent": ["error", 2],
+    "indent": "off",
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off"
   }
 }
