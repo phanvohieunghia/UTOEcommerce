@@ -23,7 +23,11 @@ const Item1 = (props) => {
         </div>
         <div className="item1__footer">
           <div className="item1__footer-rating">
-            5 Start
+            <Icons.Star />
+            <Icons.Star />
+            <Icons.Star />
+            <Icons.Star />
+            <Icons.Star />
             <span>(0)</span>
           </div>
           <div className="item1__footer-address">{address}</div>

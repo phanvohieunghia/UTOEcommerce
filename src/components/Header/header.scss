@@ -26,8 +26,10 @@
     }
     &__logo {
       font-size: 1.6rem;
-      color: rgb(80 181 255 / 80%);
       height: 22.5px;
+      > svg {
+        fill: rgb(80 181 255 / 80%);
+      }
     }
     &__logo > * {
       height: 22px;
@@ -45,12 +47,15 @@
     &__item {
       display: flex;
       background-color: #e4e6eb;
-      width: 36px;
-      height: 36px;
       border-radius: 50%;
+      height: 36px;
+      width: 36px;
       text-align: center;
       justify-content: center;
       align-items: center;
+      > svg {
+        height: 16px;
+      }
     }
     &__item:not(:first-child) {
       margin-left: 10px;

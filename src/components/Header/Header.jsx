@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
+import Icons from 'assets/icons';
 
 const Header = () => {
   return (
@@ -17,32 +18,46 @@ const Header = () => {
           <div className="hd-main col-md">
             {/* Đào tạo */}
             <Link to="/education" className="hd-main__item">
-              <div className="hd-main__logo"></div>
+              <div className="hd-main__logo">
+                <Icons.EducationCap />
+              </div>
               <div className="hd-main__text">Đào tạo</div>
             </Link>
             {/* Cộng đồng */}
             <Link to="/community" className="hd-main__item">
-              <div className="hd-main__logo"></div>
+              <div className="hd-main__logo">
+                <Icons.User />
+              </div>
               <div className="hd-main__text">Cộng đồng</div>
             </Link>
             {/* Sản thương mại */}
             <Link to="/" className="hd-main__item">
-              <div className="hd-main__logo"></div>
+              <div className="hd-main__logo">
+                <Icons.CartPlus />
+              </div>
               <div className="hd-main__text">Sản thương mại</div>
             </Link>
             {/* Dịch vụ */}
             <Link to="/services" className="hd-main__item">
-              <div className="hd-main__logo"></div>
+              <div className="hd-main__logo">
+                <Icons.PuzzlePiece />
+              </div>
               <div className="hd-main__text">Dịch vụ</div>
             </Link>
           </div>
           <div className="hd-right col-md-3">
             {/* Search */}
-            <div className="hd-right__item"></div>
-            {/* ShoppingBag */}
-            <div className="hd-right__item"></div>
+            <div className="hd-right__item">
+              <Icons.MagnifyingGlass />
+            </div>
+            {/* BagShopping */}
+            <div className="hd-right__item">
+              <Icons.BagShopping />
+            </div>
             {/* faUser */}
-            <div className="hd-right__item"></div>
+            <div className="hd-right__item">
+              <Icons.User />
+            </div>
           </div>
           <div className="hd-right-mb col">
             {/* Search */}
