@@ -179,6 +179,9 @@
     padding: 0 20px;
     font-size: 1.44rem;
     margin-bottom: 5px;
+    > div {
+      word-spacing: 1px;
+    }
     span {
       font-weight: 700;
     }
@@ -192,13 +195,67 @@
     }
   }
   &-btn {
-    & > div {
-      padding: 6px 14px;
-      font-size: 1.44rem;
-    }
     display: flex;
     justify-content: space-around;
-    &__like {
+    padding: 5px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    > div {
+      display: flex;
+      align-items: center;
+      padding: 6px 20px;
+      font-size: 1.44rem;
+      > svg {
+        height: 14px;
+      }
+    }
+  }
+  &-commentFrame {
+    background-color: #eee;
+    border-radius: 24px;
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    input {
+      flex: 1;
+      background-color: #eee;
+      border: transparent;
+      font-size: 1.6rem;
+    }
+    > svg {
+      height: 16px;
+      fill: rgb(80 181 255 / 80%);
+    }
+  }
+  &-listItem {
+    margin-bottom: 8px;
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+    &__avatar {
+      margin-right: 15px;
+      > img {
+        height: 50px;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px;
+      border-radius: 14px;
+      background-color: #eee;
+      margin-bottom: 8px;
+    }
+    &__name {
+      font-size: 1.44rem;
+      font-weight: 700;
+    }
+    &__comment {
+      font-size: 1.44rem;
+      font-weight: 400;
     }
   }
 }

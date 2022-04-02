@@ -9,7 +9,8 @@ const Item1 = (props) => {
     <div className="item1">
       <div className="item1__img">
         <img src={`/img/product/${img}.png`} alt="error png" />
-      </div>      <div className="item1__content">
+      </div>{' '}
+      <div className="item1__content">
         <div className="item1__name">{name}</div>
         <div className="item1__price">
           {Math.floor(price / 1000)}.
@@ -91,66 +92,73 @@ const FormatPrice = ({ price = 0 }) => {
     group(unitPrice, price > 1000, true)
   );
 };
-const Item4 = ({
-  avatarUser,
-  nameUser,
-  dateToNow,
-  titlePost,
-  contentPost,
-  imgPost,
-  likeQuantity,
-  commentQuantity,
-  shareQuantity,
-  commentList,
-}) => {
+const Item4 = ({ ...rest }) => {
   return (
     <div className="item4">
       <div className="item4-head">
         <div className="item4-head__avatarUser">
-          <img src={'/img/Community/' + avatarUser + '.png'} alt="error png" />
+          <img
+            src={'/img/Community/' + rest.avatarUser + '.png'}
+            alt="error png"
+          />
         </div>
         <div className="item4-head-right">
-          <div className="item4-head-right__name">{nameUser}</div>
-          <div className="item4-head-right__dateToNow">{dateToNow}</div>
+          <div className="item4-head-right__name">{rest.nameUser}</div>
+          <div className="item4-head-right__dateToNow">{rest.dateToNow}</div>
         </div>
       </div>
-      <div className="item4__titlePost">{titlePost}</div>
-      <div className="item4__contentPost">{contentPost}</div>
+      <div className="item4__titlePost">{rest.titlePost}</div>
+      <div className="item4__contentPost">{rest.contentPost}</div>
       <div className="item4__imgPost">
-        <img src={'/img/Community/' + imgPost + '.jpg'} alt="error png" />
+        <img src={'/img/Community/' + rest.imgPost + '.jpg'} alt="error png" />
       </div>
       <div className="item4-contact">
         <div className="item4-contact__like">
-          <span>{likeQuantity}</span>lượt thích
+          <span>{rest.likeQuantity}</span>&nbsp;lượt thích
         </div>
         <div className="item4-contact-right">
           <div className="item4-contact-right__comment">
-            <span>{commentQuantity}</span>bình luận
+            <span>{rest.commentQuantity}</span>&nbsp;bình luận
           </div>
           <div className="item4-contact-right__share">
-            <span>{shareQuantity}</span>lượt chia sẻ
+            <span>{rest.shareQuantity}</span>&nbsp;lượt chia sẻ
           </div>
         </div>
       </div>
       <div className="item4-btn">
         <div className="item4-btn__like">
-          <Icons.Logo />
-          Thích
+          <Icons.ThumbUp />
+          &nbsp;Thích
         </div>
         <div className="item4-btn__comment">
-          <Icons.Logo />
-          Bình luận
+          <Icons.Comments />
+          &nbsp;Bình luận
         </div>
         <div className="item4-btn__share">
-          <Icons.Logo />
-          Chia sẻ
+          <Icons.Share />
+          &nbsp;Chia sẻ
         </div>
-        Nghĩa
       </div>
       <div className="item4-commentFrame">
         <input type="text" placeholder="Viết bình luận..." />
+        <Icons.PaperPlane />
       </div>
-      {commentList}
+      <div className="item4-listItem">
+        {rest.commentList.map((data, i) => (
+          <div className="item4-listItem__item">
+            <div className="item4-listItem__avatar">
+              <img
+                src={'/img/Community/' + data.avatarUser + '.png'}
+                alt="error png"
+              />
+            </div>
+            <div className="item4-listItem__content">
+              <div className="item4-listItem__name">{data.nameUser}</div>
+              <div className="item4-listItem__comment">{data.commentUser}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
