@@ -1,10 +1,10 @@
-import React from 'react'
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import HomePage from '../views/HomePage'
-import EducationPage from '../views/EducationPage'
-import ServicesPage from '../views/ServicesPage'
-import CommunityPage from '../views/CommunityPage'
+import HomePage from '../views/HomePage';
+import EducationPage from '../views/EducationPage';
+import ServicesPage from '../views/ServicesPage';
+import CommunityPage from '../views/CommunityPage';
 
 const Routers = () => {
   return (
@@ -14,7 +14,7 @@ const Routers = () => {
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/services" element={<ServicesPage />} />
     </Routes>
-  )
-}
+  );
+};
 
-export default Routers
+export default Routers;
