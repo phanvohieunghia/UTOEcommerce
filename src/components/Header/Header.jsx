@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
 import Icons from 'assets/icons';
+import Data from 'assets/data/Header.json';
 
 const Header = () => {
   return (
@@ -21,28 +22,28 @@ const Header = () => {
               <div className="hd-main__logo">
                 <Icons.EducationCap />
               </div>
-              <div className="hd-main__text">Đào tạo</div>
+              <div className="hd-main__text">{Data.education}</div>
             </Link>
             {/* Cộng đồng */}
             <Link to="/community" className="hd-main__item">
               <div className="hd-main__logo">
                 <Icons.User />
               </div>
-              <div className="hd-main__text">Cộng đồng</div>
+              <div className="hd-main__text">{Data.community}</div>
             </Link>
             {/* Sản thương mại */}
             <Link to="/" className="hd-main__item">
               <div className="hd-main__logo">
                 <Icons.CartPlus />
               </div>
-              <div className="hd-main__text">Sản thương mại</div>
+              <div className="hd-main__text">{Data.ecommerce}</div>
             </Link>
             {/* Dịch vụ */}
             <Link to="/services" className="hd-main__item">
               <div className="hd-main__logo">
                 <Icons.PuzzlePiece />
               </div>
-              <div className="hd-main__text">Dịch vụ</div>
+              <div className="hd-main__text">{Data.service}</div>
             </Link>
           </div>
           <div className="hd-right col-md-3">
@@ -57,6 +58,30 @@ const Header = () => {
             {/* faUser */}
             <div className="hd-right__item">
               <Icons.User />
+              <div className="user-box">
+                <div className="user-box__item">
+                  <div className="user-box-left">
+                    <Icons.User />
+                  </div>
+                  <div className="user-box-right">{Data.user.login}</div>
+                </div>
+                <div className="user-box__item">
+                  <div className="user-box-left">
+                    <Icons.Building />
+                  </div>
+                  <div className="user-box-right">
+                    {Data.user.storeManagement}
+                  </div>
+                </div>
+                <div className="user-box__item">
+                  <div className="user-box-left">
+                    <Icons.AddressBook />
+                  </div>
+                  <div className="user-box-right">
+                    {Data.user.webManagement}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="hd-right-mb col">

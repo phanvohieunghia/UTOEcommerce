@@ -1,0 +1,11 @@
+{
+  "education": "Đào tạo",
+  "community": "Cộng đồng",
+  "ecommerce": "Sàn thương mại",
+  "service": "Dịch vụ",
+  "user": {
+    "login": "Đăng nhập",
+    "storeManagement": "Quản lý cửa hàng",
+    "webManagement": "Quản lý web phân quyền"
+  }
+}
