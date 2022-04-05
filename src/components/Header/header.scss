@@ -63,17 +63,6 @@
         fill: $main-color;
         cursor: pointer;
       }
-      // &.search {
-      //   position: relative;
-      //   span {
-      //     position: absolute;
-      //     right: 0;
-      //     left: 0;
-      //     top: 0;
-      //     bottom: 0;
-      //     border-radius: 50%;
-      //   }
-      // }
     }
     &__item:not(:first-child) {
       margin-left: 10px;

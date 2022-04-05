@@ -1,6 +1,3 @@
-{
-  /* <div id="drawer-detail">{'Chưa có sản phẩm trong giỏ hàng'}</div>; */
-}
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
@@ -34,7 +31,7 @@ export default function SwipeableTemporaryDrawer({ show }) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      Nghai asdhifsihd fsdhf oisdhfoi hsdofihsdoifh
+      <div id="drawer-detail">{'Chưa có sản phẩm trong giỏ hàng'}</div>
     </Box>
   );
 
@@ -42,9 +39,15 @@ export default function SwipeableTemporaryDrawer({ show }) {
     <>
       {['right'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <span onClick={toggleDrawer(anchor, true)} style={{ height: '16px' }}>
+          <div
+            onClick={toggleDrawer(anchor, true)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Icons.BagShopping height={'16'} />
-          </span>
+          </div>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
