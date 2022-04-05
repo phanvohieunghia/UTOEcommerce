@@ -18,7 +18,7 @@ const HomePage = () => {
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
         <Slider _slides={3} callback={renderSlider2ITem} />
       </section>
-      {/* FLASH SALE */}
+      FLASH SALE
       <section className="flashsale frame">
         <div className="frame__title flashsale__title">
           <div className="flashsale__title-left">FLASH SALE</div>
@@ -41,7 +41,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* MẶT HÀNG MỚI */}
+      MẶT HÀNG MỚI
       <section className="hp-main frame">
         <div className="frame__title">MẶT HÀNG MỚI</div>
         <div className="container">
@@ -65,7 +65,7 @@ const HomePage = () => {
         <img src="/img/Ecommerce/banner/banner 1.jpg" alt="error png" />
         <img src="/img/Ecommerce/banner/banner 2.jpg" alt="error png" />
       </section>
-      {/* DÀNH RIÊNG CHO BẠN */}
+      DÀNH RIÊNG CHO BẠN
       <section className="personalForYou frame">
         <div className="frame__title personalForYou__title">
           DÀNH RIÊNG CHO BẠN

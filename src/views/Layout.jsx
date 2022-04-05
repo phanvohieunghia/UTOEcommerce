@@ -8,13 +8,25 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <div className="main" style={{ marginTop: '73px' }}>
-        <div className="container">
-          <div className="row">
+      <div
+        className="main"
+        style={{
+          marginTop: '73px',
+          position: 'fixed',
+          left: 0,
+          right: 0,
+          height: '100vh',
+        }}
+      >
+        <div className="container" style={{ height: '100%' }}>
+          <div className="row" style={{ height: '100%' }}>
             <div className="col-2">
               <Sidebar />
             </div>
-            <div className="col-8">
+            <div
+              className="col-8"
+              style={{ height: '100%', overflowY: 'scroll' }}
+            >
               <Routers />
             </div>
             <div className="col-2">

@@ -1,4 +1,4 @@
-@import '../../assets/sass/valuable';
+@import 'assets/sass/valuable';
 
 .header {
   padding: 5px 0;
@@ -28,7 +28,7 @@
       font-size: 1.6rem;
       height: 22.5px;
       > svg {
-        fill: rgb(80 181 255 / 80%);
+        fill: $main-color;
       }
     }
     &__logo > * {
@@ -53,18 +53,27 @@
       text-align: center;
       justify-content: center;
       align-items: center;
+      &.active {
+        fill: $main-color;
+      }
       > svg {
         height: 16px;
       }
-      &:last-child::after {
-        content: '';
-        position: absolute;
-        height: 20px;
-        bottom: -10px;
-        right: 0;
-        left: -100%;
-        display: none;
+      &:hover {
+        fill: $main-color;
+        cursor: pointer;
       }
+      // &.search {
+      //   position: relative;
+      //   span {
+      //     position: absolute;
+      //     right: 0;
+      //     left: 0;
+      //     top: 0;
+      //     bottom: 0;
+      //     border-radius: 50%;
+      //   }
+      // }
     }
     &__item:not(:first-child) {
       margin-left: 10px;
@@ -74,12 +83,6 @@
     }
     &__item:last-child {
       position: relative;
-      &:hover .user-box {
-        display: block;
-      }
-      &:hover::after {
-        display: block;
-      }
     }
   }
   &-right-mb {
@@ -96,11 +99,16 @@
   padding: 8px;
   z-index: 10;
   border-radius: 8px;
-  display: none;
+  fill: initial;
   &__item {
     display: flex;
     padding: 6px;
     align-items: center;
+    border-radius: 8px;
+    &:hover {
+      fill: $main-color;
+      background-color: #dbdbdb;
+    }
   }
   &-left {
     border-radius: 50%;
@@ -147,7 +155,7 @@
       justify-content: flex-end;
       &__item {
         font-size: 2.4rem;
-        color: rgb(80 181 255 / 80%);
+        color: $main-color;
       }
       &__item:not(:first-child) {
         margin-left: 15px;

@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import Drawer from 'components/MuiDrawer/Drawer';
+import BasicModal from 'components/MuiModal/Modal';
+
 import './header.scss';
 import Icons from 'assets/icons';
 import Data from 'assets/data/Header.json';
 
 const Header = () => {
+  const [showUser, setShowUser] = useState(false);
+  const toggleUserButton = () => {
+    setShowUser(!showUser);
+  };
+  const [showCart, setShowCart] = useState(false);
+  const toggleCartButton = () => {
+    setShowCart(!showCart);
+  };
+  const [showSearch, setShowSearch] = useState(false);
+  const toggleSearchButton = () => {
+    setShowSearch(!showSearch);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -48,40 +64,32 @@ const Header = () => {
           </div>
           <div className="hd-right col-md-3">
             {/* Search */}
-            <div className="hd-right__item">
+            <div
+              className={
+                'hd-right__item search ' + (showSearch ? 'active' : '')
+              }
+              onClick={toggleSearchButton}
+            >
               <Icons.MagnifyingGlass />
+              {showSearch && <BasicModal show={true} />}
             </div>
             {/* BagShopping */}
-            <div className="hd-right__item">
-              <Icons.BagShopping />
+            <div
+              className={
+                'hd-right__item bagShopping ' + (showCart ? 'active' : '')
+              }
+              onClick={toggleCartButton}
+            >
+              {/* {showCart && <Drawer show={showCart} />} */}
+              <Drawer />
             </div>
             {/* faUser */}
-            <div className="hd-right__item">
+            <div
+              className={'hd-right__item ' + (showUser ? 'active' : '')}
+              onClick={toggleUserButton}
+            >
               <Icons.User />
-              <div className="user-box">
-                <div className="user-box__item">
-                  <div className="user-box-left">
-                    <Icons.User />
-                  </div>
-                  <div className="user-box-right">{Data.user.login}</div>
-                </div>
-                <div className="user-box__item">
-                  <div className="user-box-left">
-                    <Icons.Building />
-                  </div>
-                  <div className="user-box-right">
-                    {Data.user.storeManagement}
-                  </div>
-                </div>
-                <div className="user-box__item">
-                  <div className="user-box-left">
-                    <Icons.AddressBook />
-                  </div>
-                  <div className="user-box-right">
-                    {Data.user.webManagement}
-                  </div>
-                </div>
-              </div>
+              {showUser && <UserBox />}
             </div>
           </div>
           <div className="hd-right-mb col">
@@ -97,6 +105,33 @@ const Header = () => {
         </div>
       </div>
     </header>
+  );
+};
+const UserBox = (props) => {
+  const handleProgation = (e) => {
+    e.stopPropagation();
+  };
+  return (
+    <div className="user-box" onClick={handleProgation}>
+      <div className="user-box__item">
+        <div className="user-box-left">
+          <Icons.User />
+        </div>
+        <div className="user-box-right">{Data.user.login}</div>
+      </div>
+      <div className="user-box__item">
+        <div className="user-box-left">
+          <Icons.Building />
+        </div>
+        <div className="user-box-right">{Data.user.storeManagement}</div>
+      </div>
+      <div className="user-box__item">
+        <div className="user-box-left">
+          <Icons.AddressBook />
+        </div>
+        <div className="user-box-right">{Data.user.webManagement}</div>
+      </div>
+    </div>
   );
 };
 
