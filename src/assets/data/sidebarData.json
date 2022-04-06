@@ -2,31 +2,38 @@
   "sidebar": [
     {
       "img": "left menu image 1.png",
-      "text": "Về chúng tôi"
+      "text": "Về chúng tôi",
+      "path": "https://uto.vn/introduce"
     },
     {
       "img": "left menu image 2.png",
-      "text": "Đào tạo"
+      "text": "Đào tạo",
+      "path": "/education"
     },
     {
       "img": "left menu image 3.png",
-      "text": "Cộng đồng"
+      "text": "Cộng đồng",
+      "path": "/community"
     },
     {
       "img": "left menu image 4.png",
-      "text": "Sàn thương mại"
+      "text": "Sàn thương mại",
+      "path": "/"
     },
     {
       "img": "left menu image 5.png",
-      "text": "Dịch vụ"
+      "text": "Dịch vụ",
+      "path": "services"
     },
     {
       "img": "left menu image 6.png",
-      "text": "Tin tức"
+      "text": "Tin tức",
+      "path": "/news"
     },
     {
       "img": "left menu image 7.png",
-      "text": "Liên hệ"
+      "text": "Liên hệ",
+      "path": "/contact"
     }
   ],
   "featuredcategory": {

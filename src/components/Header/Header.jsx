@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Drawer from 'components/MuiDrawer/Drawer';
@@ -35,13 +35,14 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="row">
-          <div className="hd-left col-md-2 col">
+          <Link className="hd-left col-md-2 col" to="/">
             <img
               className="hd-left__img col"
               src="/img/header/uto logo image.png"
               alt="error png"
             />
-          </div>
+          </Link>
+          <div className="col-md-1"></div>
           <div className="hd-main col-md">
             {/* Đào tạo */}
             <Link
@@ -65,7 +66,7 @@ const Header = () => {
               onClick={handleMainHeader(1)}
             >
               <div className="hd-main__logo">
-                <Icons.User />
+                <Icons.Users />
               </div>
               <div className="hd-main__text">{Data.community}</div>
             </Link>
@@ -97,6 +98,7 @@ const Header = () => {
             </Link>
             <div className="hd-main__line"></div>
           </div>
+          <div className="col-md-1"></div>
           <div className="hd-right col-md-2">
             {/* Search */}
             <div

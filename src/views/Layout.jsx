@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Sidebar from '../components/Sidebar/Sidebar';
-import FeaturedMember from '../components/FeaturedMember/FeaturedMember';
+import Header from 'components/Header/Header';
+import Sidebar from 'components/Sidebar/Sidebar';
+import FeaturedMember from 'components/FeaturedMember/FeaturedMember';
 import Routers from '../router/Routers';
 
 const Layout = () => {
@@ -25,9 +25,24 @@ const Layout = () => {
             </div>
             <div
               className="col-8"
-              style={{ height: '100%', overflowY: 'scroll' }}
+              style={{
+                height: '100%',
+                overflow: 'hidden',
+                position: 'relative',
+              }}
             >
-              <Routers />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  bottom: '0',
+                  left: '0',
+                  right: '-17px',
+                  overflowY: 'scroll',
+                }}
+              >
+                <Routers />
+              </div>
             </div>
             <div className="col-2">
               <FeaturedMember />

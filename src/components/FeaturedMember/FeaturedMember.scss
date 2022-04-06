@@ -1,3 +1,4 @@
+@import 'assets/sass/valuable';
 .fm {
   &__title {
     font-size: 1.6rem;
@@ -11,6 +12,11 @@
     display: flex;
     padding: 5px;
     align-items: center;
+    &:hover {
+      background-color: $hover-background-color;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   }
   &__logo {
     width: 14%;

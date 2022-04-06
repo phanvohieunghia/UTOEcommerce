@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  // z-index: 1;
 }
 .hd {
   &-left {
@@ -25,6 +25,9 @@
       position: relative;
       text-align: center;
       flex: 0 0 25%;
+      &:hover .hd-main__text {
+        color: $main-color;
+      }
       &.active {
         .hd-main__text {
           color: $main-color;
