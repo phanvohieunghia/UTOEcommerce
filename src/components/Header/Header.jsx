@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import Drawer from 'components/MuiDrawer/Drawer';
@@ -21,6 +21,16 @@ const Header = () => {
   const toggleSearchButton = () => {
     setShowSearch(!showSearch);
   };
+  const [activeMainHeader, setActiveMainHeader] = useState(2);
+  useEffect(() => {
+    const active = document.querySelector('.hd-main__item.active');
+    const line = document.querySelector('.hd-main__line');
+    line.style.left = active.offsetLeft + 'px';
+    line.style.width = active.offsetWidth + 'px';
+  }, [activeMainHeader]);
+  const handleMainHeader = (number) => () => {
+    setActiveMainHeader(number);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -34,35 +44,60 @@ const Header = () => {
           </div>
           <div className="hd-main col-md">
             {/* Đào tạo */}
-            <Link to="/education" className="hd-main__item">
+            <Link
+              to="/education"
+              className={
+                'hd-main__item ' + (activeMainHeader === 0 ? 'active' : '')
+              }
+              onClick={handleMainHeader(0)}
+            >
               <div className="hd-main__logo">
                 <Icons.EducationCap />
               </div>
               <div className="hd-main__text">{Data.education}</div>
             </Link>
             {/* Cộng đồng */}
-            <Link to="/community" className="hd-main__item">
+            <Link
+              to="/community"
+              className={
+                'hd-main__item ' + (activeMainHeader === 1 ? 'active' : '')
+              }
+              onClick={handleMainHeader(1)}
+            >
               <div className="hd-main__logo">
                 <Icons.User />
               </div>
               <div className="hd-main__text">{Data.community}</div>
             </Link>
             {/* Sản thương mại */}
-            <Link to="/" className="hd-main__item">
+            <Link
+              to="/"
+              className={
+                'hd-main__item ' + (activeMainHeader === 2 ? 'active' : '')
+              }
+              onClick={handleMainHeader(2)}
+            >
               <div className="hd-main__logo">
                 <Icons.CartPlus />
               </div>
               <div className="hd-main__text">{Data.ecommerce}</div>
             </Link>
             {/* Dịch vụ */}
-            <Link to="/services" className="hd-main__item">
+            <Link
+              to="/services"
+              className={
+                'hd-main__item ' + (activeMainHeader === 3 ? 'active' : '')
+              }
+              onClick={handleMainHeader(3)}
+            >
               <div className="hd-main__logo">
                 <Icons.PuzzlePiece />
               </div>
               <div className="hd-main__text">{Data.service}</div>
             </Link>
+            <div className="hd-main__line"></div>
           </div>
-          <div className="hd-right col-md-3">
+          <div className="hd-right col-md-2">
             {/* Search */}
             <div
               className={
@@ -107,7 +142,7 @@ const Header = () => {
     </header>
   );
 };
-const UserBox = (props) => {
+const UserBox = () => {
   const handleProgation = (e) => {
     e.stopPropagation();
   };

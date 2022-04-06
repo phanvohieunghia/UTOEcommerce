@@ -20,9 +20,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     &__item {
+      position: relative;
       text-align: center;
       flex: 0 0 25%;
+      &.active {
+        .hd-main__text {
+          color: $main-color;
+        }
+      }
+    }
+    &__line {
+      position: absolute;
+      height: 3px;
+      left: 0;
+      background-color: $main-color;
+      width: 0;
+      bottom: -6px;
+      transition: all 0.2s ease;
     }
     &__logo {
       font-size: 1.6rem;

@@ -149,7 +149,7 @@ const Item4 = ({ ...rest }) => {
       </div>
       <div className="item4-listItem">
         {rest.commentList.map((data, i) => (
-          <div className="item4-listItem__item">
+          <div className="item4-listItem__item" key={i}>
             <div className="item4-listItem__avatar">
               <img
                 src={'/img/Community/' + data.avatarUser + '.png'}
