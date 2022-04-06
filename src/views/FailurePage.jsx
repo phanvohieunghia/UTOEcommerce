@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'views/failurepage.scss';
+
 const FailurePage = () => {
   return (
     <div className="failure-page">
@@ -7,7 +9,9 @@ const FailurePage = () => {
         <h1>Oops!</h1>
         <img src="/img/Failure/page_error.jpg" alt="error png" />
         <h3>Page not found</h3>
-        <button>Return Home</button>
+        <Link className="btn" to="/">
+          Return home
+        </Link>
       </div>
     </div>
   );

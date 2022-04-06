@@ -4,7 +4,7 @@ import communityData from '../assets/data/communityData.json';
 
 const CommunityPage = () => {
   return (
-    <div className="community">
+    <div className="community" style={{ padding: '0 5px' }}>
       {communityData.posts.map((data, i) => {
         return (
           <section className="frame" key={i}>

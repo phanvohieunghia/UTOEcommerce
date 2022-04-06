@@ -1,0 +1,9 @@
+{
+  "HomePage": "/",
+  "EducationPage": "/education",
+  "CommunityPage": "/community",
+  "ServicesPage": "/services",
+  "NewsPage": "/news",
+  "ContactPage": "/contact",
+  "FailurePage": "*"
+}

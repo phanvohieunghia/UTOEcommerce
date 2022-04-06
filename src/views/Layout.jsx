@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
 import FeaturedMember from 'components/FeaturedMember/FeaturedMember';
 import Routers from '../router/Routers';
+import RouterData from 'assets/data/routers.json';
 
 const Layout = () => {
+  const [showFailurePage, setShowFailurePage] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    let pathNumber = 0;
+    Object.entries(RouterData).map((data) => {
+      data[1] === location.pathname ? ++pathNumber : pathNumber;
+    });
+    pathNumber > 0 ? setShowFailurePage(false) : setShowFailurePage(true);
+    console.log(showFailurePage);
+  }, [location.pathname]);
+
   return (
     <>
-      <Header />
+      {!showFailurePage && <Header />}
       <div
         className="main"
         style={{
-          marginTop: '73px',
+          marginTop: '65px',
           position: 'fixed',
           left: 0,
           right: 0,
-          height: '100vh',
+          height: 'calc(100vh - 65px)',
         }}
       >
         <div className="container" style={{ height: '100%' }}>

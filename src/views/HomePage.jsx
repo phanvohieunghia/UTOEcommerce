@@ -18,7 +18,6 @@ const HomePage = () => {
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
         <Slider _slides={3} callback={renderSlider2ITem} />
       </section>
-      FLASH SALE
       <section className="flashsale frame">
         <div className="frame__title flashsale__title">
           <div className="flashsale__title-left">FLASH SALE</div>

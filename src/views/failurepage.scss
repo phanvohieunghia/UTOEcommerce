@@ -19,20 +19,22 @@
     transform: translate(-50%, -50%);
     h1 {
       font-size: 5.2rem;
+      cursor: default;
     }
     h3 {
       font-size: 2rem;
       margin: 20px 0;
+      cursor: default;
     }
-    button {
+    .btn {
       font-size: 1.8rem;
       padding: 15px 32px;
       background-color: #4caf50;
       color: #fff;
       border: unset;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       &:hover {
-        box-shadow: $box-shadow-type;
+        box-shadow: $box-shadow-type-2;
       }
     }
   }
