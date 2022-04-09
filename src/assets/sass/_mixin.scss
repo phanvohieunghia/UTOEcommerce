@@ -1,0 +1,9 @@
+@mixin boxShadowCustom($color) {
+  @if $color == black {
+    box-shadow: 0 2px 5px 0 rgb($black-color, 16%),
+      0 2px 10px 0 rgb($black-color, 12%);
+  } @else if $color == blue {
+    box-shadow: 0 2px 5px 0 rgb($main-color, 40%),
+      0 2px 10px 0 rgb($main-color, 40%);
+  }
+}

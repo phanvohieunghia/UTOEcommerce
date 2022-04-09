@@ -13,12 +13,7 @@ const Item1 = (props) => {
       <div className="item1__content">
         <div className="item1__name">{name}</div>
         <div className="item1__price">
-          {Math.floor(price / 1000)}.
-          {restPrice > 99
-            ? restPrice + ' '
-            : restPrice > 9
-            ? '0' + restPrice + ' '
-            : '00' + restPrice + ' '}
+          <FormatPrice price={price} />
           <span>đ</span>
         </div>
         <div className="item1__footer">
@@ -70,30 +65,6 @@ const Item3 = ({ img, name, description }) => {
       <div className="item3__name">{name}</div>
       <div className="item3__description">{description}</div>
     </div>
-  );
-};
-
-const FormatPrice = ({ price = 0 }) => {
-  const millionPrice = Math.floor(price / 1000000);
-  const thousandPrice = Math.floor((price - millionPrice * 1000000) / 1000);
-  const unitPrice = price % 1000;
-  const group = (number, isPreGroup = false, isUnit = false) => {
-    return isPreGroup
-      ? number > 99
-        ? number + (!isUnit ? '.' : '')
-        : number > 9
-        ? '0' + number + (!isUnit ? '.' : '')
-        : number > 0
-        ? '00' + number + (!isUnit ? '.' : '')
-        : '000' + (!isUnit ? '.' : '')
-      : number
-      ? number + (!isUnit ? '.' : '')
-      : '';
-  };
-  return (
-    group(millionPrice) +
-    group(thousandPrice, price > 1000000) +
-    group(unitPrice, price > 1000, true)
   );
 };
 const Item4 = ({ ...rest }) => {
@@ -166,6 +137,31 @@ const Item4 = ({ ...rest }) => {
     </div>
   );
 };
+
+export const FormatPrice = ({ price = 0 }) => {
+  const millionPrice = Math.floor(price / 1000000);
+  const thousandPrice = Math.floor((price - millionPrice * 1000000) / 1000);
+  const unitPrice = price % 1000;
+  const group = (number, isPreGroup = false, isUnit = false) => {
+    return isPreGroup
+      ? number > 99
+        ? number + (!isUnit ? '.' : '')
+        : number > 9
+        ? '0' + number + (!isUnit ? '.' : '')
+        : number > 0
+        ? '00' + number + (!isUnit ? '.' : '')
+        : '000' + (!isUnit ? '.' : '')
+      : number
+      ? number + (!isUnit ? '.' : '')
+      : '';
+  };
+  return (
+    group(millionPrice) +
+    group(thousandPrice, price > 1000000) +
+    group(unitPrice, price > 1000, true)
+  );
+};
+
 const Items = {
   Item1,
   Item2,

@@ -8,16 +8,17 @@ import CommunityPage from 'views/CommunityPage';
 import NewsPage from 'views/NewsPage';
 import ContactPage from 'views/ContactPage';
 import FailurePage from 'views/FailurePage';
-
+import ProductDetailPage from 'views/ProductDetailPage';
 const Routers = () => {
   return (
     <Routes>
       <Route path="/" exact element={<HomePage />} />
-      <Route path="/education" element={<EducationPage />} />
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/news" element={<NewsPage />} />
-      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/education" exact element={<EducationPage />} />
+      <Route path="/community" exact element={<CommunityPage />} />
+      <Route path="/services" exact element={<ServicesPage />} />
+      <Route path="/news" exact element={<NewsPage />} />
+      <Route path="/trading/:productId" element={<ProductDetailPage />} />
+      <Route path="/contact" exact element={<ContactPage />} />
       <Route path="*" element={<FailurePage />} />
     </Routes>
   );

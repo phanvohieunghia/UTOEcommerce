@@ -1,0 +1,134 @@
+@import 'assets/sass/valuable';
+#product-detail {
+  padding: 0 5px;
+  .pd {
+    &-img {
+      text-align: center;
+      height: 500px;
+      margin-bottom: 15px;
+      img {
+        height: 100%;
+      }
+    }
+    &-content {
+      padding: 0 20px;
+    }
+    &-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    &-vote {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      font-size: 1.6rem;
+      &__item:not(:first-child) {
+        margin-left: 5px;
+        padding-left: 5px;
+        border-left: 1px solid #ccc;
+      }
+      &__star {
+        display: flex;
+        align-items: center;
+        svg {
+          height: 16px;
+          fill: #faca51;
+        }
+      }
+    }
+    &-price {
+      color: #b53d3c;
+      font-size: 2rem;
+      font-weight: 600;
+      span {
+        text-decoration: underline;
+      }
+    }
+    &-quantity {
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      margin-top: 20px;
+      .name {
+        font-weight: 700;
+        margin-right: 20px;
+      }
+      .available {
+        padding-left: 16px;
+      }
+    }
+    &-btn {
+      margin: 24px 0;
+      button {
+        padding: 6px 15px;
+        font-size: 1.6rem;
+        border: 1px solid $main-color;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .primary {
+        background-color: rgb(80 181 255 / 5%);
+        margin-right: 15px;
+        color: $main-color;
+        > svg {
+          height: 16px;
+          fill: $main-color;
+          margin-right: 4px;
+        }
+      }
+      .second {
+        background-color: $main-color;
+        color: #fff;
+        &:hover {
+          background-color: $hover-main-color;
+        }
+      }
+    }
+  }
+  .shop-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .img {
+      width: 100px;
+      margin-right: 12px;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .content {
+      flex: 1;
+      font-size: 16px;
+      position: relative;
+      .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        padding: 5px 8px;
+        background-color: $main-color;
+        font-size: 1.6rem;
+        border: 1px solid $hover-main-color;
+        .logo {
+          display: flex;
+          align-items: center;
+          svg {
+            height: 16px;
+            fill: #fff;
+          }
+        }
+        span {
+          color: #fff;
+          margin-left: 4px;
+        }
+      }
+      .name {
+        font-weight: 700;
+        margin-top: 10px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import dataList from '../../assets/data/Footer.json';
+import dataList from 'assets/data/Footer.json';
 import './Footer.scss';
 
 const Footer = () => {
@@ -18,10 +18,12 @@ const Footer = () => {
         </div>
         <div className="ft__title">{dataList.title2}</div>
         <div className="ft__logo">
-          {dataList.img.map((data, i) => {
+          {dataList.logo.map((data, i) => {
             return (
               <div className="ft__logo__item" key={i}>
-                <img src={'/img/footer/' + data} alt="error" />
+                <a href={data.path}>
+                  <img src={'/img/footer/' + data.img} alt="error" />
+                </a>
               </div>
             );
           })}

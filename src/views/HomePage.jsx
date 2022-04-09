@@ -1,12 +1,12 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
-
-import Footer from '../components/Footer/Footer';
-import Items from '../components/Item/Item';
-import Slider from '../components/Slider/Slider';
+import { Link } from 'react-router-dom';
+import Footer from 'components/Footer/Footer';
+import Items from 'components/Item/Item';
+import Slider from 'components/Slider/Slider';
+import ProductList from 'assets/data/NewProduct.json';
+import sliderData from 'assets/data/slider.json';
 import './homepage.scss';
-import dataList from '../assets/data/NewProduct.json';
-import sliderData from '../assets/data/slider.json';
 
 const HomePage = () => {
   return (
@@ -25,35 +25,39 @@ const HomePage = () => {
         </div>
         <div className="container">
           <div className="row">
-            {dataList.map((data, i) => {
+            {ProductList.map((data, i) => {
               return (
                 <div className="col-4" key={i}>
-                  <Items.Item1
-                    img={data.img}
-                    name={data.name}
-                    price={data.price}
-                    address={data.address}
-                  />
+                  <Link to={`/trading/${data.id}`}>
+                    <Items.Item1
+                      img={data.img}
+                      name={data.name}
+                      price={data.price}
+                      address={data.address}
+                    />
+                  </Link>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
-      MẶT HÀNG MỚI
+      {/* MẶT HÀNG MỚI */}
       <section className="hp-main frame">
         <div className="frame__title">MẶT HÀNG MỚI</div>
         <div className="container">
           <div className="row">
-            {dataList.map((data, i) => {
+            {ProductList.map((data, i) => {
               return (
                 <div className="col-4" key={i}>
-                  <Items.Item1
-                    img={data.img}
-                    name={data.name}
-                    price={data.price}
-                    address={data.address}
-                  />
+                  <Link to={`/trading/${data.id}`}>
+                    <Items.Item1
+                      img={data.img}
+                      name={data.name}
+                      price={data.price}
+                      address={data.address}
+                    />
+                  </Link>
                 </div>
               );
             })}
@@ -64,14 +68,14 @@ const HomePage = () => {
         <img src="/img/Ecommerce/banner/banner 1.jpg" alt="error png" />
         <img src="/img/Ecommerce/banner/banner 2.jpg" alt="error png" />
       </section>
-      DÀNH RIÊNG CHO BẠN
+      {/* DÀNH RIÊNG CHO BẠN */}
       <section className="personalForYou frame">
         <div className="frame__title personalForYou__title">
           DÀNH RIÊNG CHO BẠN
         </div>
         <div className="container">
           <div className="row">
-            {dataList.map((data, i) => {
+            {ProductList.map((data, i) => {
               return (
                 <div className="col-4" key={i}>
                   <Items.Item1

@@ -13,9 +13,9 @@ const Layout = () => {
     let pathNumber = 0;
     Object.entries(RouterData).map((data) => {
       data[1] === location.pathname ? ++pathNumber : pathNumber;
+      if (location.pathname.includes('/trading/')) ++pathNumber;
     });
     pathNumber > 0 ? setShowFailurePage(false) : setShowFailurePage(true);
-    console.log(showFailurePage);
   }, [location.pathname]);
 
   return (
