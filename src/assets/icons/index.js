@@ -99,25 +99,33 @@ const LocationArrow = () => (
     <path d="M285.6 444.1C279.8 458.3 264.8 466.3 249.8 463.4C234.8 460.4 223.1 447.3 223.1 432V256H47.1C32.71 256 19.55 245.2 16.6 230.2C13.65 215.2 21.73 200.2 35.88 194.4L387.9 50.38C399.8 45.5 413.5 48.26 422.6 57.37C431.7 66.49 434.5 80.19 429.6 92.12L285.6 444.1z" />
   </svg>
 );
+
+const Bars = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+  </svg>
+);
+
 const Icons = {
-  Star,
-  ThumbUp,
-  Comments,
-  Share,
-  PaperPlane,
-  EducationCap,
-  Users,
-  CartPlus,
-  PuzzlePiece,
-  MagnifyingGlass,
   BagShopping,
+  CartPlus,
+  Comments,
+  EducationCap,
+  Minus,
+  Users,
+  User2,
+  LocationArrow,
+  MagnifyingGlass,
   User,
   Building,
+  PuzzlePiece,
   AddressBook,
-  User2,
+  ThumbUp,
+  PaperPlane,
   Plus,
-  Minus,
-  LocationArrow,
+  Share,
+  Star,
+  Bars,
 };
 
 export default Icons;

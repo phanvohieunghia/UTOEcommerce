@@ -1,10 +1,10 @@
-@import '../assets/sass/valuable';
+@import 'assets/sass/valuable';
 
 #servicespage {
   padding: 0 5px;
   .sv-main {
     font-size: 2rem;
-    & * {
+    * {
       justify-content: center;
     }
   }

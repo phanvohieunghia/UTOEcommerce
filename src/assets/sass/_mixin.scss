@@ -7,3 +7,9 @@
       0 2px 10px 0 rgb($main-color, 40%);
   }
 }
+@mixin flex($justifyContent: center, $alignItems: center, $flexDirection: row) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}

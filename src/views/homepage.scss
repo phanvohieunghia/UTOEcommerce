@@ -1,5 +1,5 @@
-@import '../assets/sass/valuable';
-
+@import 'assets/sass/valuable';
+@import 'assets/sass/responsive';
 #homepage {
   padding-left: 5px;
   padding-right: 5px;
@@ -80,5 +80,9 @@
     &__title {
       border-color: #ff0000;
     }
+  }
+  @include media('screen', '<laptopM') {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

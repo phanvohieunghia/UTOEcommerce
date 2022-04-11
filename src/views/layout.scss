@@ -1,0 +1,25 @@
+@import 'assets/sass/responsive';
+
+#main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: 65px;
+  height: calc(100vh - 65px);
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+  @include media('screen', '<laptopM') {
+    .container {
+      max-width: 100%;
+    }
+  }
+  @include media('screen', '<tablet') {
+    .col-2 {
+      display: none;
+    }
+  }
+}

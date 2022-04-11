@@ -20,8 +20,12 @@ const FeaturedMember = () => {
       </div>
       <div className="fm__title">{dataComponent.downloadTitle}</div>
       <div className="fm-downloadApp">
-        <img src="/img/featuredMember/google play.png" alt="error png" />
-        <img src="/img/featuredMember/app store.png" alt="error png" />
+        <div className="img">
+          <img src="/img/featuredMember/google play.png" alt="error png" />
+        </div>
+        <div className="img">
+          <img src="/img/featuredMember/app store.png" alt="error png" />
+        </div>
       </div>
     </div>
   );

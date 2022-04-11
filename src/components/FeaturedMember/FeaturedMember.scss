@@ -1,4 +1,6 @@
 @import 'assets/sass/valuable';
+@import 'assets/sass/mixin';
+@import 'assets/sass/responsive';
 .fm {
   &__title {
     font-size: 1.6rem;
@@ -30,11 +32,20 @@
     font-weight: 600;
   }
   &-downloadApp {
-    display: flex;
-    & img {
+    @include flex(flex-start, center);
+
+    @include media('screen', '<laptopM') {
+      @include flex(center, flex-start, column);
+      gap: 2px;
+      img {
+        max-height: unset;
+        width: 100px;
+      }
+    }
+    img {
       max-height: 30px;
     }
-    & img:first-child {
+    img:first-child {
       margin-right: 4px;
     }
   }

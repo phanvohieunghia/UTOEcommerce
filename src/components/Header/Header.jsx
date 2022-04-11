@@ -22,17 +22,21 @@ const Header = () => {
     setShowSearch(!showSearch);
   };
   const [activeMainHeader, setActiveMainHeader] = useState(2);
+  const [widthChange, setWidthChange] = useState(window.screen.width);
   useEffect(() => {
     const active = document.querySelector('.hd-main__item.active');
     const line = document.querySelector('.hd-main__line');
     line.style.left = active.offsetLeft + 'px';
     line.style.width = active.offsetWidth + 'px';
-  }, [activeMainHeader]);
+    window.addEventListener('resize', function (e) {
+      setWidthChange(e.currentTarget.screen.width);
+    });
+  }, [activeMainHeader, widthChange]);
   const handleMainHeader = (number) => () => {
     setActiveMainHeader(number);
   };
   return (
-    <header className="header">
+    <header id="header">
       <div className="container">
         <div className="row">
           <Link className="hd-left col-md-2 col" to="/">
@@ -42,7 +46,7 @@ const Header = () => {
               alt="error png"
             />
           </Link>
-          <div className="col-md-1"></div>
+          {widthChange >= 992 && <div className="col-md-1"></div>}
           <div className="hd-main col-md">
             {/* Đào tạo */}
             <Link
@@ -98,7 +102,7 @@ const Header = () => {
             </Link>
             <div className="hd-main__line"></div>
           </div>
-          <div className="col-md-1"></div>
+          {widthChange >= 992 && <div className="col-md-1"></div>}
           <div className="hd-right col-md-2">
             {/* Search */}
             <div
@@ -131,13 +135,21 @@ const Header = () => {
           </div>
           <div className="hd-right-mb col">
             {/* Search */}
-            <div className="hd-right-mb__item"></div>
+            <div className="hd-right-mb__item">
+              <Icons.MagnifyingGlass />
+            </div>
             {/* Shopping */}
-            <div className="hd-right-mb__item"></div>
+            <div className="hd-right-mb__item">
+              <Icons.BagShopping />
+            </div>
             {/* User */}
-            <div className="hd-right-mb__item"></div>
+            <div className="hd-right-mb__item">
+              <Icons.User />
+            </div>
             {/* Menu */}
-            <div className="hd-right-mb__item"></div>
+            <div className="hd-right-mb__item">
+              <Icons.Bars />
+            </div>
           </div>
         </div>
       </div>

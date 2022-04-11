@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+
 import Header from 'components/Header/Header';
 import Sidebar from 'components/Sidebar/Sidebar';
 import FeaturedMember from 'components/FeaturedMember/FeaturedMember';
 import Routers from '../router/Routers';
 import RouterData from 'assets/data/routers.json';
+import './layout.scss';
 
 const Layout = () => {
   const [showFailurePage, setShowFailurePage] = useState(false);
@@ -21,23 +23,14 @@ const Layout = () => {
   return (
     <>
       {!showFailurePage && <Header />}
-      <div
-        className="main"
-        style={{
-          marginTop: '65px',
-          position: 'fixed',
-          left: 0,
-          right: 0,
-          height: 'calc(100vh - 65px)',
-        }}
-      >
-        <div className="container" style={{ height: '100%' }}>
-          <div className="row" style={{ height: '100%' }}>
+      <div id="main">
+        <div className="container">
+          <div className="row">
             <div className="col-2">
               <Sidebar />
             </div>
             <div
-              className="col-8"
+              className="col-md-8 col-12"
               style={{
                 height: '100%',
                 overflow: 'hidden',

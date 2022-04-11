@@ -27,7 +27,7 @@ const HomePage = () => {
           <div className="row">
             {ProductList.map((data, i) => {
               return (
-                <div className="col-4" key={i}>
+                <div className="col-6 col-sm-4" key={i}>
                   <Link to={`/trading/${data.id}`}>
                     <Items.Item1
                       img={data.img}
@@ -49,7 +49,7 @@ const HomePage = () => {
           <div className="row">
             {ProductList.map((data, i) => {
               return (
-                <div className="col-4" key={i}>
+                <div className="col-6 col-sm-4" key={i}>
                   <Link to={`/trading/${data.id}`}>
                     <Items.Item1
                       img={data.img}
