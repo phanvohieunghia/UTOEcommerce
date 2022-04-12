@@ -15,10 +15,6 @@ const Header = () => {
   const toggleUserButton = () => {
     setShowUser(!showUser);
   };
-  const [showCart, setShowCart] = useState(false);
-  const toggleCartButton = () => {
-    setShowCart(!showCart);
-  };
   // HandleSearch
   const searchState = useSelector((state) => state.global.search);
   const dispatch = useDispatch();
@@ -60,21 +56,18 @@ const Header = () => {
   };
   return (
     <header id="header">
-      <Drawer
-        arrow={['left']}
-        callback={toggleDrawer}
-        state={state}
-        setState={setState}
-      />
+      <Drawer arrow={['right']} callback={toggleDrawer} state={state} />
       <div className="container">
         <div className="row">
-          <Link className="hd-left col-md-2 col" to="/">
-            <img
-              className="hd-left__img col"
-              src="/img/header/uto logo image.png"
-              alt="error png"
-            />
-          </Link>
+          <div className="hd-left col-md-2 col">
+            <Link to="/">
+              <img
+                className="hd-left__img col"
+                src="/img/header/uto logo image.png"
+                alt="error png"
+              />
+            </Link>
+          </div>
           {widthChange >= 992 && <div className="col-md-1"></div>}
           <div className="hd-main col-md">
             {/* Đào tạo */}
@@ -145,9 +138,9 @@ const Header = () => {
             {/* BagShopping */}
             <div
               className={
-                'hd-right__item bagShopping ' + (showCart ? 'active' : '')
+                'hd-right__item bagShopping ' + (state.right ? 'active' : '')
               }
-              onClick={toggleDrawer('left', true)}
+              onClick={toggleDrawer('right', true)}
             >
               <Icons.BagShopping height={'16'} />
             </div>

@@ -43,23 +43,11 @@ const Layout = () => {
             <div
               className="col-md-8 col-12"
               style={{
+                overflowY: 'scroll',
                 height: '100%',
-                overflow: 'hidden',
-                position: 'relative',
               }}
             >
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '0',
-                  bottom: '0',
-                  left: '0',
-                  right: '-17px',
-                  overflowY: 'scroll',
-                }}
-              >
-                <Routers />
-              </div>
+              <Routers />
             </div>
             <div className="col-2">
               <FeaturedMember />

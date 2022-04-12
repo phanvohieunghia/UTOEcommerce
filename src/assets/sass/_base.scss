@@ -35,3 +35,9 @@ a {
     margin-bottom: 10px;
   }
 }
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}

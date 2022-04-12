@@ -12,7 +12,9 @@
   z-index: 1;
   .hd {
     &-left {
-      &__img {
+      cursor: default;
+      img {
+        cursor: pointer;
         width: 100px;
       }
     }
