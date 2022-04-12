@@ -64,14 +64,11 @@
       justify-content: flex-end;
       align-items: center;
       &__item {
-        display: flex;
+        @include flex(center, center);
         background-color: #e4e6eb;
         border-radius: 50%;
         height: 36px;
         width: 36px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
         &.active {
           fill: $main-color;
         }

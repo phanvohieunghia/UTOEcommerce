@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Drawer from 'components/MuiDrawer/Drawer';
-import BasicModal from 'components/MuiModal/Modal';
+// import BasicModal from 'components/MuiModal/Modal';
 
 import './header.scss';
 import Icons from 'assets/icons';
 import Data from 'assets/data/Header.json';
+import { toggleSearch } from 'actions/global';
 
 const Header = () => {
   const [showUser, setShowUser] = useState(false);
@@ -17,10 +19,31 @@ const Header = () => {
   const toggleCartButton = () => {
     setShowCart(!showCart);
   };
-  const [showSearch, setShowSearch] = useState(false);
+  // HandleSearch
+  const searchState = useSelector((state) => state.global.search);
+  const dispatch = useDispatch();
   const toggleSearchButton = () => {
-    setShowSearch(!showSearch);
+    const action = toggleSearch(searchState);
+    dispatch(action);
   };
+  // HandleBagShopping
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setState({ ...state, [anchor]: open });
+  };
+  //
+
   const [activeMainHeader, setActiveMainHeader] = useState(2);
   const [widthChange, setWidthChange] = useState(window.screen.width);
   useEffect(() => {
@@ -37,6 +60,12 @@ const Header = () => {
   };
   return (
     <header id="header">
+      <Drawer
+        arrow={['left']}
+        callback={toggleDrawer}
+        state={state}
+        setState={setState}
+      />
       <div className="container">
         <div className="row">
           <Link className="hd-left col-md-2 col" to="/">
@@ -107,22 +136,20 @@ const Header = () => {
             {/* Search */}
             <div
               className={
-                'hd-right__item search ' + (showSearch ? 'active' : '')
+                'hd-right__item search ' + (searchState ? 'active' : '')
               }
               onClick={toggleSearchButton}
             >
               <Icons.MagnifyingGlass />
-              {showSearch && <BasicModal show={true} />}
             </div>
             {/* BagShopping */}
             <div
               className={
                 'hd-right__item bagShopping ' + (showCart ? 'active' : '')
               }
-              onClick={toggleCartButton}
+              onClick={toggleDrawer('left', true)}
             >
-              {/* {showCart && <Drawer show={showCart} />} */}
-              <Drawer />
+              <Icons.BagShopping height={'16'} />
             </div>
             {/* faUser */}
             <div

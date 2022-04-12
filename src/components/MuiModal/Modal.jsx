@@ -20,26 +20,21 @@ const style = {
   outlineStyle: 'none',
 };
 
-export default function BasicModal({ show }) {
-  const [open, setOpen] = React.useState(false);
-  const handleClose = () => setOpen(false);
-  const handleProgation = (e) => {
-    e.stopPropagation();
-  };
+export default function BasicModal({ show, callback }) {
   return (
     <div>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={show}
-        onClose={handleClose}
+        onClose={callback}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{ timeout: 500 }}
       >
         <Fade in={show}>
           <Box sx={style}>
-            <div id="model-detail" onClick={handleProgation}>
+            <div id="model-detail">
               <div className="search-frame">
                 <input type="text" placeholder="Tìm kiếm trên UTO" />
                 <Icons.MagnifyingGlass height={16} />

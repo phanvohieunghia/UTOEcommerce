@@ -31,3 +31,16 @@
     "react/prop-types": "off"
   }
 }
+// jsconfig.js
+// {
+//   "compilerOptions": {
+//     "baseUrl": "src",
+//     "paths": {
+//       "assets/*": ["src/assets/*"],
+//       "components/*": ["src/components/*"],
+//       "views/*": ["src/views/*"],
+//       "router/*": ["src/router/*"]
+//     }
+//   },
+//   "include": ["src"]
+// }

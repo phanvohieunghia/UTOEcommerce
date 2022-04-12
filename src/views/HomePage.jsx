@@ -1,6 +1,7 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+
 import Footer from 'components/Footer/Footer';
 import Items from 'components/Item/Item';
 import Slider from 'components/Slider/Slider';

@@ -11,7 +11,7 @@ import './slider.scss';
 // import required modules
 import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper';
 
-export default function App({
+export default function Slider({
   _slides = 1,
   _effect,
   callback = () => {},
