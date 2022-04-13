@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Drawer from 'components/MuiDrawer/Drawer';
@@ -71,57 +71,49 @@ const Header = () => {
           {widthChange >= 992 && <div className="col-md-1"></div>}
           <div className="hd-main col-md">
             {/* Đào tạo */}
-            <Link
+            <NavLink
               to="/education"
-              className={
-                'hd-main__item ' + (activeMainHeader === 0 ? 'active' : '')
-              }
+              className="hd-main__item"
               onClick={handleMainHeader(0)}
             >
               <div className="hd-main__logo">
                 <Icons.EducationCap />
               </div>
               <div className="hd-main__text">{Data.education}</div>
-            </Link>
+            </NavLink>
             {/* Cộng đồng */}
-            <Link
+            <NavLink
               to="/community"
-              className={
-                'hd-main__item ' + (activeMainHeader === 1 ? 'active' : '')
-              }
+              className="hd-main__item "
               onClick={handleMainHeader(1)}
             >
               <div className="hd-main__logo">
                 <Icons.Users />
               </div>
               <div className="hd-main__text">{Data.community}</div>
-            </Link>
+            </NavLink>
             {/* Sản thương mại */}
-            <Link
+            <NavLink
               to="/"
-              className={
-                'hd-main__item ' + (activeMainHeader === 2 ? 'active' : '')
-              }
+              className="hd-main__item"
               onClick={handleMainHeader(2)}
             >
               <div className="hd-main__logo">
                 <Icons.CartPlus />
               </div>
               <div className="hd-main__text">{Data.ecommerce}</div>
-            </Link>
+            </NavLink>
             {/* Dịch vụ */}
-            <Link
+            <NavLink
               to="/services"
-              className={
-                'hd-main__item ' + (activeMainHeader === 3 ? 'active' : '')
-              }
+              className="hd-main__item"
               onClick={handleMainHeader(3)}
             >
               <div className="hd-main__logo">
                 <Icons.PuzzlePiece />
               </div>
               <div className="hd-main__text">{Data.service}</div>
-            </Link>
+            </NavLink>
             <div className="hd-main__line"></div>
           </div>
           {widthChange >= 992 && <div className="col-md-1"></div>}

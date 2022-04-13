@@ -12,6 +12,8 @@ import Items from 'components/Item/Item';
 
 const ProductDetailPage = () => {
   const { productId } = useParams();
+  const x = useParams();
+  console.log(x);
   const currentProduct = DataList.find((prod) => prod.id === productId);
   return (
     <div id="product-detail">
