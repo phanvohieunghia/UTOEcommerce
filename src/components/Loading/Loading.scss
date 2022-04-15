@@ -1,0 +1,22 @@
+@import 'assets/sass/mixin';
+
+#loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @include flex(center, center);
+  margin: auto;
+  .logo {
+    .svg-loader {
+      height: 100px;
+    }
+  }
+  .img {
+    @include flex(center, center);
+    img {
+      height: 60px;
+    }
+  }
+}

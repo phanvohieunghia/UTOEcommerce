@@ -1,19 +1,18 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 
-import Footer from '../components/Footer/Footer';
-// import Slider from '../components/Slider/Slider';
-import Items from '../components/Item/Item';
-import sliderData from '../assets/data/slider.json';
-import educationData from '../assets/data/educationData.json';
-
-import './educationpage.scss';
+import Footer from 'components/Footer/Footer';
+import Slider from 'components/Slider/Slider';
+import Items from 'components/Item/Item';
+import sliderData from 'assets/data/slider.json';
+import educationData from 'assets/data/educationData.json';
+import './Education.scss';
 
 const EducationPage = () => {
   return (
     <main id="educationpage">
       <section className="banner">
-        {/* <Slider _effect={'fade'} callback={SliderItem} /> */}
+        <Slider _effect={'fade'} callback={SliderItem} />
       </section>
       <section className="edu-link frame">
         <div className="container">
@@ -37,7 +36,7 @@ const EducationPage = () => {
         </div>
       </section>
       <section className="edu-video frame">
-        {/* <Slider _slides={2} callback={Slider2Item} _pagination={true} /> */}
+        <Slider _slides={2} callback={Slider2Item} _pagination={true} />
       </section>
       <section className="course frame">
         <div className="course__title">Khoá học nổi bật</div>

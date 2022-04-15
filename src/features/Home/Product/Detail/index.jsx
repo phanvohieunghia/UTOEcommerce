@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import DataList from 'assets/data/NewProduct.json';
 import Icons from 'assets/icons';
 import { FormatPrice } from 'components/Item/Item';
-import './productDetailPage.scss';
+import './Detail.scss';
 import InputQuantity from 'components/InputQuantity/InputQuantity';
 import Footer from 'components/Footer/Footer';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,6 @@ import Items from 'components/Item/Item';
 const ProductDetailPage = () => {
   const { productId } = useParams();
   const x = useParams();
-  console.log(x);
   const currentProduct = DataList.find((prod) => prod.id === productId);
   return (
     <div id="product-detail">

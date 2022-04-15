@@ -3,18 +3,29 @@ import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Drawer from 'components/MuiDrawer/Drawer';
-// import BasicModal from 'components/MuiModal/Modal';
 
-import './header.scss';
+import './Header.scss';
 import Icons from 'assets/icons';
 import Data from 'assets/data/Header.json';
 import { toggleSearch } from 'actions/global';
 
 const Header = () => {
+  //HandleUser
   const [showUser, setShowUser] = useState(false);
   const toggleUserButton = () => {
     setShowUser(!showUser);
   };
+  const closeChildUser = () => {
+    setShowUser(false);
+    window.removeEventListener('click', closeChildUser);
+  };
+
+  useEffect(() => {
+    if (showUser) {
+      window.addEventListener('click', closeChildUser);
+    }
+  }, [showUser]);
+
   // HandleSearch
   const searchState = useSelector((state) => state.global.search);
   const dispatch = useDispatch();
@@ -45,8 +56,10 @@ const Header = () => {
   useEffect(() => {
     const active = document.querySelector('.hd-main__item.active');
     const line = document.querySelector('.hd-main__line');
-    line.style.left = active.offsetLeft + 'px';
-    line.style.width = active.offsetWidth + 'px';
+    if (active) {
+      line.style.left = active.offsetLeft + 'px';
+      line.style.width = active.offsetWidth + 'px';
+    }
     window.addEventListener('resize', function (e) {
       setWidthChange(e.currentTarget.screen.width);
     });
@@ -121,7 +134,7 @@ const Header = () => {
             {/* Search */}
             <div
               className={
-                'hd-right__item search ' + (searchState ? 'active' : '')
+                'hd-right__item search' + (searchState ? ' active' : '')
               }
               onClick={toggleSearchButton}
             >
@@ -130,7 +143,7 @@ const Header = () => {
             {/* BagShopping */}
             <div
               className={
-                'hd-right__item bagShopping ' + (state.right ? 'active' : '')
+                'hd-right__item bagShopping' + (state.right ? ' active' : '')
               }
               onClick={toggleDrawer('right', true)}
             >
@@ -138,7 +151,7 @@ const Header = () => {
             </div>
             {/* faUser */}
             <div
-              className={'hd-right__item ' + (showUser ? 'active' : '')}
+              className={'hd-right__item' + (showUser ? ' active' : '')}
               onClick={toggleUserButton}
             >
               <Icons.User />

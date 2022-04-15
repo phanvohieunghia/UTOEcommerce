@@ -7,7 +7,7 @@ import Items from 'components/Item/Item';
 import Slider from 'components/Slider/Slider';
 import ProductList from 'assets/data/NewProduct.json';
 import sliderData from 'assets/data/slider.json';
-import './homepage.scss';
+import './Trading.scss';
 
 const HomePage = () => {
   return (

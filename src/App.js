@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from 'views/Layout';
+import React, { Suspense } from 'react';
+import Router from 'routes';
 
 function App() {
   return (
     <div className="App">
-      <Layout />
+      <Router />
     </div>
   );
 }

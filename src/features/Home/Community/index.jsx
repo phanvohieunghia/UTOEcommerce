@@ -1,6 +1,6 @@
 import React from 'react';
-import Items from '../components/Item/Item';
-import communityData from '../assets/data/communityData.json';
+import Items from 'components/Item/Item';
+import communityData from 'assets/data/communityData.json';
 
 const CommunityPage = () => {
   return (
