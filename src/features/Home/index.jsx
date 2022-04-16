@@ -1,5 +1,5 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import BasicModal from 'components/MuiModal/Modal';
@@ -16,6 +16,11 @@ const Layout = () => {
     const action = toggleSearch(stateSearch);
     dispatch(action);
   };
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const x = document.querySelector('#main .main-container');
+    x.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
   return (
     <>
       <BasicModal show={stateSearch} callback={toggleSearchButton} />
@@ -27,7 +32,7 @@ const Layout = () => {
               <Sidebar />
             </div>
             <div
-              className="col-md-8 col-12"
+              className="col-md-8 col-12 main-container"
               style={{
                 overflowY: 'scroll',
                 height: '100%',

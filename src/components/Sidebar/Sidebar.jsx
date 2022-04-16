@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.scss';
-import dataList from 'assets/data/sidebarData.json';
-
+import sidebarData from 'assets/data/sidebar.json';
+import { ChangeToSlug } from 'components/Common';
+import productData from 'assets/data/Product.json';
 const Sidebar = () => {
+  // console.log(sidebarData.category.content);
+  let categoryNumber = {};
+  sidebarData.category.content.forEach((data) => {
+    categoryNumber[data.name] = 0;
+  });
+  productData.forEach((data) => {
+    categoryNumber[data.category]++;
+  });
+
+  // useEffect(() => {
+  //   const categoryNumber = {};
+  // }, []);
   return (
     <>
       <div className="sidebar">
-        {dataList.sidebar.map((data, i) => {
+        {sidebarData.sidebar.map((data, i) => {
           if (data.path.includes('http')) {
             return (
               <a className="sidebar__item" key={i} href={data.path}>
@@ -30,16 +43,22 @@ const Sidebar = () => {
         })}
       </div>
       <div className="featurecategory">
-        <div className="fc__title">{dataList.featuredcategory.title}</div>
+        <div className="fc__title">{sidebarData.category.title}</div>
         <div className="fc__content">
-          {dataList.featuredcategory.content.map((data, i) => {
+          {sidebarData.category.content.map((data, i) => {
             return (
-              <div className="fc__item" key={i}>
+              <Link
+                to={'/trading/' + ChangeToSlug(data.name)}
+                className="fc__item"
+                key={i}
+              >
                 <div className="fc__logo">
-                  <img src={'/img/sidebar/' + data.img} alt="error png" />
+                  <img src={'/img/Category/' + data.img} alt="error png" />
                 </div>
-                <div className="fc__text">{data.text}</div>
-              </div>
+                <div className="fc__text">
+                  {data.name} ({categoryNumber[data.name]})
+                </div>
+              </Link>
             );
           })}
         </div>

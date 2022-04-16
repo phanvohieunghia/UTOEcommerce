@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useMatch } from 'react-router-dom';
 
 // import NotFound from 'components/NotFound';
 // import EducationPage from 'features/Home/Education';
@@ -10,6 +10,7 @@ import ProductDetailPage from 'features/Home/Product/Detail';
 import ContactPage from 'features/Home/Contact';
 import NewsPage from 'features/Home/News';
 import Loading from 'components/Loading';
+import ProductCategoryPage from 'features/Home/Product/Category';
 
 const Home = lazy(() => {
   return new Promise((resolve) => {
@@ -43,6 +44,7 @@ const ServicesPage = lazy(() => {
 });
 
 const Router = () => {
+  // console.log(matczh);
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
@@ -95,7 +97,15 @@ const Router = () => {
             }
           />
           <Route
-            path="/trading/:productId"
+            path="/trading/:productSlug"
+            element={
+              <Suspense fallback={<Loading />}>
+                <ProductCategoryPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/trading/:productSlug/:productId"
             element={
               <Suspense fallback={<Loading />}>
                 <ProductDetailPage />

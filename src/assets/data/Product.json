@@ -1,0 +1,422 @@
+[
+  {
+    "id": 0,
+    "name": "Serum Trẻ Hoá Thông Minh VIBA 5ml",
+    "category": "Sắc đẹp",
+    "img": "sac-dep-serum-tre-hoa.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 1,
+    "name": "Dầu Gội Đầu Tigi Beg Head",
+    "category": "Sắc đẹp",
+    "img": "sac-dep-dau-goi-dau.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 2,
+    "name": "Xịt Dưỡng Lưu Hương Cho Tóc",
+    "category": "Sắc đẹp",
+    "img": "sac-dep-xit-duong-luu-huong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 3,
+    "name": "Vitamin E Kỉkland 500 viên",
+    "category": "Sức khoẻ",
+    "img": "suc-khoe-vitamin-e.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 4,
+    "name": "Tỏi Đen Cô Đơn Sunkun 200gr",
+    "category": "Sức khoẻ",
+    "img": "suc-khoe-toi-den-co-don.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 5,
+    "name": "Cao Hồng Sâm Hàn Quốc",
+    "category": "Sức khoẻ",
+    "img": "suc-khoe-cao-hong-sam.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 6,
+    "name": "Điện Thoại IPhone 13 Pro Max 128GB",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-iphone.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 7,
+    "name": "Pin Sạc Dự Phòng",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-pin-sac-du-phong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 8,
+    "name": "Loa Bluetooth Mozard X21",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-loa-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 9,
+    "name": "Cáp Type C - Lightning 1m",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-cap-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 10,
+    "name": "Adapter Sạc Type C PG",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-adapter-sac-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 11,
+    "name": "Pin Sạc Dự Phòng",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-pin-sac-du-phong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 12,
+    "name": "Loa Bluetooth Mozard X21",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-loa-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 13,
+    "name": "Cáp Type C - Lightning 1m",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-cap-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 14,
+    "name": "Adapter Sạc Type C PG",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-adapter-sac-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 15,
+    "name": "Pin Sạc Dự Phòng",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-pin-sac-du-phong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 16,
+    "name": "Loa Bluetooth Mozard X21",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-loa-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 17,
+    "name": "Cáp Type C - Lightning 1m",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-cap-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 18,
+    "name": "Adapter Sạc Type C PG",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-adapter-sac-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 19,
+    "name": "Pin Sạc Dự Phòng",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-pin-sac-du-phong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 20,
+    "name": "Loa Bluetooth Mozard X21",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-loa-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 21,
+    "name": "Cáp Type C - Lightning 1m",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-cap-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 22,
+    "name": "Adapter Sạc Type C PG",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-adapter-sac-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 23,
+    "name": "Pin Sạc Dự Phòng",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-pin-sac-du-phong.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 24,
+    "name": "Loa Bluetooth Mozard X21",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-loa-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 25,
+    "name": "Cáp Type C - Lightning 1m",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-cap-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 26,
+    "name": "Adapter Sạc Type C PG",
+    "category": "Điện Thoại & Phụ Kiện",
+    "img": "dien-thoai-phu-kien-adapter-sac-typeC.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 27,
+    "name": "Kính Mát Nhựa Viền Gọng Kim Loại Màu Đen Vàng",
+    "category": "Phụ Kiện Thời Trang",
+    "img": "phu-kien-thoi-trang-kinh-mat-nhua.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 28,
+    "name": "Kính Cận Kim Loại Tròn Nhỏ ĐUôi Nút NGọc Trai Đen Vàng",
+    "category": "Phụ Kiện Thời Trang",
+    "img": "phu-kien-thoi-trang-kinh-can.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 29,
+    "name": "Muỗng Xới Cơm Đế Đứng Sendai",
+    "category": "Nhà Cửa & Đời Sống",
+    "img": "nha-cua-doi-song-muong-xoi-com.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 30,
+    "name": "Bộ Lọc Nước Sinh Hoạt - Hàn Quốc",
+    "category": "Nhà Cửa & Đời Sống",
+    "img": "nha-cua-doi-song-bo-loc-nuoc.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 31,
+    "name": "Khay Đá Sáng Tạo",
+    "category": "Nhà Cửa & Đời Sống",
+    "img": "nha-cua-doi-song-khay-da-sang-tao.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 32,
+    "name": "Kệ Chén Bát Tokyo 2 Tầng Đa Năng",
+    "category": "Nhà Cửa & Đời Sống",
+    "img": "nha-cua-doi-song-ke-chen-bac.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 33,
+    "name": "Ví 3 Màu (Xanh - Hồng - Nầu)",
+    "category": "Túi Ví Nữ",
+    "img": "tui-vi-nu-vi-3-mau.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 34,
+    "name": "Tai Nghe Chụp Tai Bluetooth",
+    "category": "Thiết Bị Âm Thanh",
+    "img": "thien-bi-am-thanh-tai-nghe-bluetooth.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 35,
+    "name": "Đồng Hồ Trẻ Em",
+    "category": "Đồng Hồ",
+    "img": "dong-ho-dong-ho-tre-em.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 36,
+    "name": "Samsusng Galaxy Watch",
+    "category": "Đồng Hồ",
+    "img": "dong-ho-samsung-galaxy.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 37,
+    "name": "Apple Watch SE",
+    "category": "Đồng Hồ",
+    "img": "dong-ho-apple-watch-se.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 38,
+    "name": "Đầm Liền",
+    "category": "Thời Trang Nữ",
+    "img": "thoi-trang-nu-dam-lien.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 39,
+    "name": "Đầm Công Chúa Dự Tiệc Dạ Hội",
+    "category": "Thời Trang Nữ",
+    "img": "thoi-trang-nu-dam-cong-chua-du-tiec.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 40,
+    "name": "Cà Phê Hạt Pha Máy Robustas",
+    "category": "Thực Phẩm & Đồ Uống",
+    "img": "thuc-pham-do-uong-cafe-hat-pha-may.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  },
+  {
+    "id": 41,
+    "name": "Nho Khô ChiLe",
+    "category": "Thực Phẩm & Đồ Uống",
+    "img": "thuc-pham-do-uong-nho-kho.png",
+    "price": 47200,
+    "quantity": 10,
+    "address": "TP. Hồ Chí Minh",
+    "imgDesc": ["x4", "x5"]
+  }
+]

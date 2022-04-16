@@ -35,6 +35,7 @@ const HomePage = () => {
                       name={data.name}
                       price={data.price}
                       address={data.address}
+                      folder="product"
                     />
                   </Link>
                 </div>
@@ -51,12 +52,13 @@ const HomePage = () => {
             {ProductList.map((data, i) => {
               return (
                 <div className="col-6 col-sm-4" key={i}>
-                  <Link to={`/trading/${data.id}`}>
+                  <Link to={`/trading}/${data.id}`}>
                     <Items.Item1
                       img={data.img}
                       name={data.name}
                       price={data.price}
                       address={data.address}
+                      folder="product"
                     />
                   </Link>
                 </div>
@@ -84,6 +86,7 @@ const HomePage = () => {
                     name={data.name}
                     price={data.price}
                     address={data.address}
+                    folder="product"
                   />
                 </div>
               );

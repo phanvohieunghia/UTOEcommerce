@@ -11,8 +11,8 @@ import ProductList from 'assets/data/NewProduct.json';
 import Items from 'components/Item/Item';
 
 const ProductDetailPage = () => {
-  const { productId } = useParams();
-  const x = useParams();
+  const { productId, productSlug } = useParams();
+  console.log(productId, productSlug);
   const currentProduct = DataList.find((prod) => prod.id === productId);
   return (
     <div id="product-detail">
@@ -87,6 +87,7 @@ const ProductDetailPage = () => {
                       name={data.name}
                       price={data.price}
                       address={data.address}
+                      folder="Product2"
                     />
                   </Link>
                 </div>

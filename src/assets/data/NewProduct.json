@@ -2,46 +2,46 @@
   {
     "id": "0",
     "name": "Son Dừa Dưỡng Môi",
-    "img": "son dua",
+    "img": "son dua.png",
     "price": 47200,
     "quantity": 10,
     "address": "TP. Hồ Chí Minh",
-    "imgDesc": ["x4", "x5"]
+    "imgDesc": ["x4", "x5.png"]
   },
   {
     "id": "1",
     "name": "Xịt Khoáng Hoa Hồng",
-    "img": "hoa hong",
+    "img": "hoa hong.png",
     "price": 933034234,
     "quantity": 10,
     "address": "TP. Hồ Chí Minh",
-    "imgDesc": ["x4", "x5"]
+    "imgDesc": ["x4", "x5.png"]
   },
   {
     "id": "2",
     "name": "Bán Sỉ Khô Mực Size 40-50 Con 1KG",
-    "img": "muc",
+    "img": "muc.png",
     "price": 60002,
     "quantity": 10,
     "address": "Hà Nội",
-    "imgDesc": ["x4", "x5"]
+    "imgDesc": ["x4", "x5.png"]
   },
   {
     "id": "3",
     "name": "Áo Đồng Phục Siêu Thị 123SALE",
-    "img": "ao",
+    "img": "ao.png",
     "price": 140000,
     "quantity": 10,
     "address": "TP. Hồ Chí Minh",
-    "imgDesc": ["x4", "x5"]
+    "imgDesc": ["x4", "x5.png"]
   },
   {
     "id": "4",
     "name": "Váy Đầm Body Nhún Sườn",
-    "img": "vay",
+    "img": "vay.png",
     "price": 239000,
     "quantity": 10,
     "address": "TP. Đà Nẵng",
-    "imgDesc": ["x4", "x5"]
+    "imgDesc": ["x4", "x5.png"]
   }
 ]

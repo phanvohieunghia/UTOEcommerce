@@ -36,20 +36,48 @@
       "path": "/contact"
     }
   ],
-  "featuredcategory": {
+  "category": {
     "title": "Danh mục nổi bật",
     "content": [
       {
-        "img": "featuredCategory 1.png",
-        "text": "Thể Thao & Dã Ngoại (1)"
+        "img": "sac.png",
+        "name": "Sắc đẹp"
       },
       {
-        "img": "featuredCategory 2.png",
-        "text": "Nhà cửa  & Đời Sống (1)"
+        "img": "suc.png",
+        "name": "Sức khoẻ"
       },
       {
-        "img": "featuredCategory 3.png",
-        "text": "Thực Phẩm & Đồ Uống (2)"
+        "img": "dien.png",
+        "name": "Điện Thoại & Phụ Kiện"
+      },
+      {
+        "img": "phu.png",
+        "name": "Phụ Kiện Thời Trang"
+      },
+      {
+        "img": "nha.png",
+        "name": "Nhà Cửa & Đời Sống"
+      },
+      {
+        "img": "thoi.png",
+        "name": "Thời Trang Nữ"
+      },
+      {
+        "img": "thuc.png",
+        "name": "Thực Phẩm & Đồ Uống"
+      },
+      {
+        "img": "tui.png",
+        "name": "Túi Ví Nữ"
+      },
+      {
+        "img": "thiet.png",
+        "name": "Thiết Bị Âm Thanh"
+      },
+      {
+        "img": "dong.png",
+        "name": "Đồng Hồ"
       }
     ]
   }

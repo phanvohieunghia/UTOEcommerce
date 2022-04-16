@@ -3,12 +3,11 @@ import Icons from 'assets/icons';
 import './item.scss';
 
 const Item1 = (props) => {
-  const { img = '', name = '', price = '', address = '' } = props;
-  const restPrice = price % 1000;
+  const { img = '', name = '', price = '', address = '', folder = '' } = props;
   return (
     <div className="item1">
       <div className="item1__img">
-        <img src={`/img/product/${img}.png`} alt="error png" />
+        <img src={`/img/${folder}/${img}`} alt="error png" />
       </div>{' '}
       <div className="item1__content">
         <div className="item1__name">{name}</div>
