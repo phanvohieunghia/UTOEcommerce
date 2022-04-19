@@ -29,3 +29,26 @@ export function ChangeToSlug(value) {
   //In slug ra textbox có id “slug”
   return slug;
 }
+export const FormatPrice = ({ price = 0 }) => {
+  const millionPrice = Math.floor(price / 1000000);
+  const thousandPrice = Math.floor((price - millionPrice * 1000000) / 1000);
+  const unitPrice = price % 1000;
+  const group = (number, isPreGroup = false, isUnit = false) => {
+    return isPreGroup
+      ? number > 99
+        ? number + (!isUnit ? '.' : '')
+        : number > 9
+        ? '0' + number + (!isUnit ? '.' : '')
+        : number > 0
+        ? '00' + number + (!isUnit ? '.' : '')
+        : '000' + (!isUnit ? '.' : '')
+      : number
+      ? number + (!isUnit ? '.' : '')
+      : '';
+  };
+  return (
+    group(millionPrice) +
+    group(thousandPrice, price > 1000000) +
+    group(unitPrice, price > 1000, true)
+  );
+};

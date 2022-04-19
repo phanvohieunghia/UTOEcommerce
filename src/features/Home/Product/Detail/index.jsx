@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import DataList from 'assets/data/NewProduct.json';
+import DataList from 'assets/data/Product.json';
 import Icons from 'assets/icons';
-import { FormatPrice } from 'components/Item/Item';
+import { FormatPrice } from 'components/Common';
 import './Detail.scss';
 import InputQuantity from 'components/InputQuantity/InputQuantity';
 import Footer from 'components/Footer/Footer';
@@ -11,14 +11,13 @@ import ProductList from 'assets/data/NewProduct.json';
 import Items from 'components/Item/Item';
 
 const ProductDetailPage = () => {
-  const { productId, productSlug } = useParams();
-  console.log(productId, productSlug);
-  const currentProduct = DataList.find((prod) => prod.id === productId);
+  const { productId } = useParams();
+  const currentProduct = DataList.find((prod) => prod.id === Number(productId));
   return (
     <div id="product-detail">
       <section className="frame">
         <div className="pd-img">
-          <img src={`/img/product/${currentProduct.img}.png`} alt="error png" />
+          <img src={`/img/Product2/${currentProduct.img}`} alt="error png" />
         </div>
         <div className="pd-content">
           <div className="pd-name">{currentProduct.name}</div>

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Drawer from 'components/MuiDrawer/Drawer';
 
-import './Header.scss';
+import './header.scss';
 import Icons from 'assets/icons';
 import Data from 'assets/data/Header.json';
 import { toggleSearch } from 'actions/global';
