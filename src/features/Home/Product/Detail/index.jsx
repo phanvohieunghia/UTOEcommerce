@@ -1,18 +1,22 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import DataList from 'assets/data/Product.json';
+import Products from 'assets/data/Product.json';
 import Icons from 'assets/icons';
 import { FormatPrice } from 'components/Common';
 import './Detail.scss';
 import InputQuantity from 'components/InputQuantity/InputQuantity';
 import Footer from 'components/Footer/Footer';
 import { Link } from 'react-router-dom';
-import ProductList from 'assets/data/NewProduct.json';
 import Items from 'components/Item/Item';
-
+import { ChangeToSlug } from 'components/Common';
 const ProductDetailPage = () => {
-  const { productId } = useParams();
-  const currentProduct = DataList.find((prod) => prod.id === Number(productId));
+  const { productId, productSlug } = useParams();
+  console.log(productId, productSlug);
+  const currentProduct = Products.find((data) => data.id === Number(productId));
+  const allRelativeProducts = Products.filter(
+    (data) => ChangeToSlug(data.category) === productSlug,
+  );
+  const relativeProducts = allRelativeProducts.filter((data, i) => i < 6);
   return (
     <div id="product-detail">
       <section className="frame">
@@ -77,16 +81,17 @@ const ProductDetailPage = () => {
         <div className="frame__title">SẢN PHẨM TƯƠNG TỰ</div>
         <div className="container">
           <div className="row">
-            {ProductList.map((data, i) => {
+            {relativeProducts.map((data, i) => {
               return (
                 <div className="col-4" key={i}>
-                  <Link to={`/trading/${data.id}`}>
+                  <Link
+                    to={`/trading/${ChangeToSlug(data.category)}/${data.id}`}
+                  >
                     <Items.Item1
                       img={data.img}
                       name={data.name}
                       price={data.price}
                       address={data.address}
-                      folder="Product2"
                     />
                   </Link>
                 </div>

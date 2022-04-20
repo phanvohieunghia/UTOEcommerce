@@ -3,11 +3,11 @@ import Icons from 'assets/icons';
 import './item.scss';
 import { FormatPrice } from 'components/Common';
 const Item1 = (props) => {
-  const { img = '', name = '', price = '', address = '', folder = '' } = props;
+  const { img = '', name = '', price = '', address = '' } = props;
   return (
     <div className="item1">
       <div className="item1__img">
-        <img src={`/img/${folder}/${img}`} alt="error png" />
+        <img src={`/img/Product2/${img}`} alt="error png" />
       </div>{' '}
       <div className="item1__content">
         <div className="item1__name">{name}</div>

@@ -26,9 +26,21 @@ const Pagination = ({ switchPage, page, currentPage }) => {
   return (
     <div id="pagination">
       <ul className="pagination">
-        <li>{currentPage !== 1 && <Icons.AngleLeft height={'16px'} />}</li>
+        <li>
+          {currentPage !== 1 && (
+            <button onClick={switchPage(currentPage - 1)}>
+              <Icons.AngleLeft height={'16px'} />
+            </button>
+          )}
+        </li>
         {render()}
-        <li>{currentPage !== page && <Icons.AngleRight height={'16px'} />}</li>
+        <li>
+          {currentPage !== page && (
+            <button onClick={switchPage(currentPage + 1)}>
+              <Icons.AngleRight height={'16px'} />
+            </button>
+          )}
+        </li>
       </ul>
     </div>
   );

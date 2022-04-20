@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import Footer from 'components/Footer/Footer';
 import Items from 'components/Item/Item';
 import Slider from 'components/Slider/Slider';
-import ProductList from 'assets/data/NewProduct.json';
+import Products from 'assets/data/Product.json';
 import sliderData from 'assets/data/slider.json';
 import './Trading.scss';
-
+import { ChangeToSlug } from 'components/Common';
 const HomePage = () => {
+  const specialProducts = Products.filter((data) => data.version === 'special');
+  console.log(specialProducts);
   return (
     <main id="homepage">
       <section className="slider">
@@ -26,10 +28,12 @@ const HomePage = () => {
         </div>
         <div className="container">
           <div className="row">
-            {ProductList.map((data, i) => {
+            {specialProducts.map((data, i) => {
               return (
                 <div className="col-6 col-sm-4" key={i}>
-                  <Link to={`/trading/${data.id}`}>
+                  <Link
+                    to={`/trading/${ChangeToSlug(data.category)}/${data.id}`}
+                  >
                     <Items.Item1
                       img={data.img}
                       name={data.name}
@@ -49,7 +53,7 @@ const HomePage = () => {
         <div className="frame__title">MẶT HÀNG MỚI</div>
         <div className="container">
           <div className="row">
-            {ProductList.map((data, i) => {
+            {specialProducts.map((data, i) => {
               return (
                 <div className="col-6 col-sm-4" key={i}>
                   <Link to={`/trading}/${data.id}`}>
@@ -78,7 +82,7 @@ const HomePage = () => {
         </div>
         <div className="container">
           <div className="row">
-            {ProductList.map((data, i) => {
+            {specialProducts.map((data, i) => {
               return (
                 <div className="col-4" key={i}>
                   <Items.Item1
