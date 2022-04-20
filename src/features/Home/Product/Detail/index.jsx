@@ -11,7 +11,6 @@ import Items from 'components/Item/Item';
 import { ChangeToSlug } from 'components/Common';
 const ProductDetailPage = () => {
   const { productId, productSlug } = useParams();
-  console.log(productId, productSlug);
   const currentProduct = Products.find((data) => data.id === Number(productId));
   const allRelativeProducts = Products.filter(
     (data) => ChangeToSlug(data.category) === productSlug,

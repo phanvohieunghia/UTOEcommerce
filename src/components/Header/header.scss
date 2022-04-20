@@ -77,9 +77,11 @@
         > svg {
           height: 16px;
         }
-        &:hover {
-          fill: $main-color;
-          cursor: pointer;
+        @include media('hover') {
+          &:hover {
+            fill: $main-color;
+            cursor: pointer;
+          }
         }
       }
       &__item:not(:first-child) {
@@ -104,9 +106,9 @@
     background-color: #fff;
     box-shadow: $box-shadow-type;
     padding: 8px;
-    // z-index: 100;
     border-radius: 8px;
     fill: initial;
+    @include unselectable;
     &__item {
       display: flex;
       padding: 6px;
@@ -153,15 +155,27 @@
         display: none;
       }
       &-right-mb {
-        @include flex(flex-end, center);
+        @include flex(flex-end);
         &__item {
           svg {
             height: 24px;
             fill: $main-color;
           }
+          .user-box {
+            &__item {
+              .user-box-left {
+                svg {
+                  fill: initial;
+                }
+              }
+            }
+          }
         }
         &__item:not(:first-child) {
           margin-left: 15px;
+        }
+        &__item:last-child {
+          padding-right: 5px;
         }
       }
     }

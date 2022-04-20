@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import './drawer.scss';
-export default function MuiDrawer({ arrow, callback, state }) {
+export default function MuiDrawer({ arrow, callback, state, render }) {
   return (
     <div>
       {[...arrow].map((anchor) => (
@@ -12,9 +12,7 @@ export default function MuiDrawer({ arrow, callback, state }) {
             open={state[anchor]}
             onClose={callback(anchor, false)}
           >
-            <Box sx={{ width: 350 }}>
-              <div id="drawer-detail">Chưa có sản phẩm trong giỏ hàng</div>
-            </Box>
+            <Box sx={{ width: 350 }}>{render()}</Box>
           </Drawer>
         </React.Fragment>
       ))}

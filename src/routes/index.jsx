@@ -44,7 +44,6 @@ const ServicesPage = lazy(() => {
 });
 
 const Router = () => {
-  // console.log(matczh);
   return (
     <Suspense fallback={<Loading />}>
       <Routes>

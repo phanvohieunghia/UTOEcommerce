@@ -11,7 +11,6 @@ import './Trading.scss';
 import { ChangeToSlug } from 'components/Common';
 const HomePage = () => {
   const specialProducts = Products.filter((data) => data.version === 'special');
-  console.log(specialProducts);
   return (
     <main id="homepage">
       <section className="slider">

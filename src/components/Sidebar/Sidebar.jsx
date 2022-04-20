@@ -5,7 +5,6 @@ import sidebarData from 'assets/data/sidebar.json';
 import { ChangeToSlug } from 'components/Common';
 import productData from 'assets/data/Product.json';
 const Sidebar = () => {
-  // console.log(sidebarData.category.content);
   let categoryNumber = {};
   sidebarData.category.content.forEach((data) => {
     categoryNumber[data.name] = 0;
@@ -13,10 +12,6 @@ const Sidebar = () => {
   productData.forEach((data) => {
     categoryNumber[data.category]++;
   });
-
-  // useEffect(() => {
-  //   const categoryNumber = {};
-  // }, []);
   return (
     <>
       <div className="sidebar">

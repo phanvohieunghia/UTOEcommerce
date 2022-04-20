@@ -24,6 +24,7 @@ $res_320: 320px;
     '<mobileM': '(max-width: #{$res_375 - 0.01})',
     '>mobileS': '(min-width: #{$res_320})',
     '<mobileS': '(max-width: #{$res_320 - 0.01})',
+    'hover': '(hover: hover)',
   );
   @return map-get($condMap, $c);
 }
