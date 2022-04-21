@@ -10,30 +10,15 @@ import Data from 'assets/data/Header.json';
 import { toggleSearch } from 'actions/global';
 
 const Header = () => {
-  const [y, setY] = useState(false);
-  const fuc = () => {
-    setY(!y);
-  };
   //HandleUser
   const [showUser, setShowUser] = useState(false);
-
-  console.log('showUser: ', showUser, ' ---------------------------');
-  const openUserButton = () => {
-    console.log('click button');
-    if (!showUser) {
-      setShowUser(true);
-    }
+  const openUserButton = (e) => {
+    setShowUser(!showUser);
+    e.stopPropagation();
   };
-  // const toggleUserButton = () => {
-  //   if (showUser) {
-  //     setShowUser(false);
-  //     window.removeEventListener('click', toggleUserButton);
-  //   }
-  // };
   useEffect(() => {
-    if (showUser) {
-      window.addEventListener('click', toggleUserButton);
-    }
+    const toggleUserButton = () => setShowUser(false);
+    showUser && window.addEventListener('click', toggleUserButton);
     return () => window.removeEventListener('click', toggleUserButton);
   }, [showUser]);
 
@@ -218,14 +203,11 @@ const Header = () => {
   );
 };
 const UserBox = () => {
-  // const handleProgation = (e) => {
-  //   e.stopPropagation();
-  // };
+  const handleProgation = (e) => {
+    e.stopPropagation();
+  };
   return (
-    <div
-      className="user-box"
-      // onClick={handleProgation}
-    >
+    <div className="user-box" onClick={handleProgation}>
       <div className="user-box__item">
         <div className="user-box-left">
           <Icons.User />
