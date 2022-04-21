@@ -6,7 +6,7 @@ import { ChangeToSlug } from 'components/Common';
 import productData from 'assets/data/Product.json';
 import Icons from 'assets/icons';
 
-const Sidebar = () => {
+const Sidebar = ({ flatform, callback }) => {
   let categoryNumber = {};
   sidebarData.category.content.forEach((data) => {
     categoryNumber[data.name] = 0;
@@ -29,12 +29,14 @@ const Sidebar = () => {
             );
           } else {
             return (
-              <Link className="sidebar__item" key={i} to={data.path}>
-                <div className="sidebar__logo">
-                  <img src={'/img/sidebar/' + data.img} alt="error png" />
-                </div>
-                <div className="sidebar__text">{data.text}</div>
-              </Link>
+              <span key={i} onClick={() => callback()}>
+                <Link className="sidebar__item" to={data.path}>
+                  <div className="sidebar__logo">
+                    <img src={'/img/sidebar/' + data.img} alt="error png" />
+                  </div>
+                  <div className="sidebar__text">{data.text}</div>
+                </Link>
+              </span>
             );
           }
         })}
@@ -49,12 +51,14 @@ const Sidebar = () => {
                 className="fc__item"
                 key={i}
               >
-                <div className="fc__logo">
-                  <img src={'/img/Category/' + data.img} alt="error png" />
-                </div>
-                <div className="fc__text">
-                  {data.name} ({categoryNumber[data.name]})
-                </div>
+                <span key={i} onClick={() => callback()}>
+                  <div className="fc__logo">
+                    <img src={'/img/Category/' + data.img} alt="error png" />
+                  </div>
+                  <div className="fc__text">
+                    {data.name} ({categoryNumber[data.name]})
+                  </div>
+                </span>
               </Link>
             );
           })}

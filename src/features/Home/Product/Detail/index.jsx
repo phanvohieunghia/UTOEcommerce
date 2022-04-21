@@ -82,7 +82,7 @@ const ProductDetailPage = () => {
           <div className="row">
             {relativeProducts.map((data, i) => {
               return (
-                <div className="col-4" key={i}>
+                <div className="col-6 col-sm-4" key={i}>
                   <Link
                     to={`/trading/${ChangeToSlug(data.category)}/${data.id}`}
                   >

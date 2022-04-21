@@ -37,12 +37,12 @@ const Header = () => {
     right: false,
   });
   const toggleDrawerCart = (anchor, open) => (event) => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
-    }
+    // if (
+    //   event.type === 'keydown' &&
+    //   (event.key === 'Tab' || event.key === 'Shift')
+    // ) {
+    //   return;
+    // }
     setState({ ...state, [anchor]: open });
   };
   const renderDrawerCart = () => {
@@ -59,7 +59,10 @@ const Header = () => {
           </div>
         </div>
         <div className="content">
-          <Sidebar flatform="mobile" />
+          <Sidebar
+            flatform="mobile"
+            callback={toggleDrawerCart('left', false)}
+          />
         </div>
       </div>
     );

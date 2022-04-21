@@ -10,9 +10,6 @@ import Items from 'components/Item/Item';
 import Footer from 'components/Footer/Footer';
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
-  // useEffect(() => {
-  //   window.screen.width < 576 && ;
-  // }, [isMobile]);
   const specialProducts = Products.filter(
     (data) => data.version === 'special',
   ).filter((data, i, array) => {
@@ -21,11 +18,9 @@ const HomePage = () => {
       return data;
     } else if (!isMobile) return data;
   });
-  console.log('re-renders');
   useEffect(() => {
     const handleisMobile = (e) => {
       setIsMobile(e.currentTarget.screen.width < 576);
-      console.log('resize', e.currentTarget.screen.width < 576);
     };
     setIsMobile(window.screen.width < 576);
     window.addEventListener('resize', handleisMobile);

@@ -1,14 +1,14 @@
 @import 'assets/sass/valuable';
 @import 'assets/sass/mixin';
+@import 'assets/sass/responsive';
 
 .sidebar {
   display: flex;
   flex-direction: column;
   height: 400px;
   &__item {
-    display: flex;
+    @include flex('flex-start');
     padding: 10px 0 10px 5px;
-    align-items: center;
     &:hover {
       background-color: $hover-background-color;
       border-radius: 8px;
@@ -40,9 +40,11 @@
     flex-direction: column;
   }
   &__item {
-    display: flex;
+    @include flex('flex-start');
     padding: 5px;
-    align-items: center;
+    > span {
+      @include flex;
+    }
     &:hover {
       background-color: $hover-background-color;
       border-radius: 8px;

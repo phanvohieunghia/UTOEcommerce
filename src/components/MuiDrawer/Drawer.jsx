@@ -2,6 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import './drawer.scss';
+
+const style = {
+  // maxWidth: 500,
+  // width: '100%',
+};
+
 export default function MuiDrawer({ arrow, callback, state, render }) {
   return (
     <div>
@@ -12,7 +18,7 @@ export default function MuiDrawer({ arrow, callback, state, render }) {
             open={state[anchor]}
             onClose={callback(anchor, false)}
           >
-            <Box sx={{ width: 420 }}>{render()}</Box>
+            <Box sx={style}>{render()}</Box>
           </Drawer>
         </React.Fragment>
       ))}
