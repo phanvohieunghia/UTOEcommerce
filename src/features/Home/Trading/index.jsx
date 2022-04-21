@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SwiperSlide } from 'swiper/react';
-import { Link } from 'react-router-dom';
-
-import Footer from 'components/Footer/Footer';
-import Items from 'components/Item/Item';
-import Slider from 'components/Slider/Slider';
 import Products from 'assets/data/Product.json';
 import sliderData from 'assets/data/slider.json';
 import './Trading.scss';
 import { ChangeToSlug } from 'components/Common';
+import Slider from 'components/Slider/Slider';
+import { Link } from 'react-router-dom';
+import Items from 'components/Item/Item';
+import Footer from 'components/Footer/Footer';
 const HomePage = () => {
-  const specialProducts = Products.filter((data) => data.version === 'special');
+  const [isMobile, setIsMobile] = useState(false);
+  // useEffect(() => {
+  //   window.screen.width < 576 && ;
+  // }, [isMobile]);
+  const specialProducts = Products.filter(
+    (data) => data.version === 'special',
+  ).filter((data, i, array) => {
+    const filterLength = (array.length * 2) / 3;
+    if (isMobile && i < filterLength) {
+      return data;
+    } else if (!isMobile) return data;
+  });
+  console.log('re-renders');
+  useEffect(() => {
+    const handleisMobile = (e) => {
+      setIsMobile(e.currentTarget.screen.width < 576);
+      console.log('resize', e.currentTarget.screen.width < 576);
+    };
+    setIsMobile(window.screen.width < 576);
+    window.addEventListener('resize', handleisMobile);
+    return () => window.removeEventListener('resize', handleisMobile);
+  }, [isMobile]);
   return (
     <main id="homepage">
       <section className="slider">
@@ -18,7 +38,7 @@ const HomePage = () => {
       </section>
       <section className="slider2 frame">
         <div className="slider2__title frame__title">CỬA HÀNG UY TÍN</div>
-        <Slider _slides={3} callback={renderSlider2ITem} />
+        <Slider _slides={isMobile ? 2 : 3} callback={renderSlider2ITem} />
       </section>
       <section className="flashsale frame">
         <div className="frame__title flashsale__title">
@@ -83,7 +103,7 @@ const HomePage = () => {
           <div className="row">
             {specialProducts.map((data, i) => {
               return (
-                <div className="col-4" key={i}>
+                <div className="col-6 col-sm-4" key={i}>
                   <Items.Item1
                     img={data.img}
                     name={data.name}

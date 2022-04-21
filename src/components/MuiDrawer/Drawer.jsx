@@ -12,7 +12,7 @@ export default function MuiDrawer({ arrow, callback, state, render }) {
             open={state[anchor]}
             onClose={callback(anchor, false)}
           >
-            <Box sx={{ width: 350 }}>{render()}</Box>
+            <Box sx={{ width: 420 }}>{render()}</Box>
           </Drawer>
         </React.Fragment>
       ))}

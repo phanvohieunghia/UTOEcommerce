@@ -1,4 +1,6 @@
 @import 'assets/sass/valuable';
+@import 'assets/sass/responsive';
+
 .input-quantity {
   display: flex;
   align-items: center;
@@ -26,8 +28,10 @@
         padding: 0 12px;
         height: 13px;
       }
-      &:hover {
-        fill: $main-color;
+      @include media('hover') {
+        &:hover {
+          fill: $main-color;
+        }
       }
     }
     > input {

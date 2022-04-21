@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.scss';
 import sidebarData from 'assets/data/sidebar.json';
 import { ChangeToSlug } from 'components/Common';
 import productData from 'assets/data/Product.json';
+import Icons from 'assets/icons';
+
 const Sidebar = () => {
   let categoryNumber = {};
   sidebarData.category.content.forEach((data) => {

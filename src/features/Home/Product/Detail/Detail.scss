@@ -1,10 +1,12 @@
 @import 'assets/sass/valuable';
+@import 'assets/sass/responsive';
+
 #product-detail {
   padding: 0 5px;
   .pd {
     &-img {
       text-align: center;
-      height: 500px;
+      height: 480px;
       margin-bottom: 15px;
       img {
         height: 100%;
@@ -129,6 +131,21 @@
         font-weight: 700;
         margin-top: 10px;
       }
+    }
+  }
+  @include media('screen', '<tablet') {
+    .pd-img {
+      height: 400px;
+    }
+  }
+  @include media('screen', '<mobileL') {
+    .pd-img {
+      height: 300px;
+    }
+  }
+  @include media('screen', '<mobileM') {
+    .pd-img {
+      height: 270px;
     }
   }
 }

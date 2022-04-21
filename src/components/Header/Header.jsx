@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import Sidebar from 'components/Sidebar/Sidebar';
 import Drawer from 'components/MuiDrawer/Drawer';
 
 import './header.scss';
@@ -50,7 +50,19 @@ const Header = () => {
   };
   //handleBars
   const renderDrawerBars = () => {
-    return <>Nghiax</>;
+    return (
+      <div id="drawerbars">
+        <div className="sidebar-heading">
+          <img src="/img/header/uto logo image.png" alt="error png" />
+          <div className="icon" onClick={toggleDrawerCart('left', false)}>
+            <Icons.AngleLeft height="20px" />
+          </div>
+        </div>
+        <div className="content">
+          <Sidebar flatform="mobile" />
+        </div>
+      </div>
+    );
   };
   //
 
@@ -63,9 +75,11 @@ const Header = () => {
       line.style.left = active.offsetLeft + 'px';
       line.style.width = active.offsetWidth + 'px';
     }
-    window.addEventListener('resize', function (e) {
+    const handleWidthChange = (e) => {
       setWidthChange(e.currentTarget.screen.width);
-    });
+    };
+    window.addEventListener('resize', handleWidthChange);
+    return () => window.removeEventListener('resize', handleWidthChange);
   }, [activeMainHeader, widthChange]);
   const handleMainHeader = (number) => () => {
     setActiveMainHeader(number);
