@@ -8,7 +8,7 @@ const Item1 = (props) => {
     <div className="item1">
       <div className="item1__img">
         <img src={`/img/Product2/${img}`} alt="error png" />
-      </div>{' '}
+      </div>
       <div className="item1__content">
         <div className="item1__name">{name}</div>
         <div className="item1__price">
@@ -40,9 +40,7 @@ const Item2 = ({ img, name, lecturer, discount, price }) => {
         <div className="item2__name">{name}</div>
         <div className="item2__lecturer">{lecturer}</div>
         <div className="item2__price">
-          {discount <= 0 ? (
-            ''
-          ) : (
+          {discount > 0 && (
             <span>
               <FormatPrice price={discount} />
               <sup>đ</sup>

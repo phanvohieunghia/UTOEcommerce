@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Products from 'assets/data/Product.json';
 import Icons from 'assets/icons';
@@ -16,6 +16,7 @@ const ProductDetailPage = () => {
     (data) => ChangeToSlug(data.category) === productSlug,
   );
   const relativeProducts = allRelativeProducts.filter((data, i) => i < 6);
+
   return (
     <div id="product-detail">
       <section className="frame">
@@ -49,11 +50,15 @@ const ProductDetailPage = () => {
             </div>
           </div>
           <div className="pd-btn">
-            <button className="primary">
-              <Icons.CartPlus />
-              Thâm vào Giỏ Hảng
-            </button>
-            <button className="second">Mua hàng</button>
+            <div>
+              <button className="primary">
+                <Icons.CartPlus />
+                Thâm vào Giỏ Hảng
+              </button>
+            </div>
+            <div>
+              <button className="second">Mua hàng</button>
+            </div>
           </div>
         </div>
       </section>

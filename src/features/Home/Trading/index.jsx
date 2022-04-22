@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
+
 import Products from 'assets/data/Product.json';
 import sliderData from 'assets/data/slider.json';
 import './Trading.scss';
 import { ChangeToSlug } from 'components/Common';
 import Slider from 'components/Slider/Slider';
-import { Link } from 'react-router-dom';
 import Items from 'components/Item/Item';
 import Footer from 'components/Footer/Footer';
+
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const specialProducts = Products.filter(

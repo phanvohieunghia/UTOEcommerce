@@ -80,9 +80,30 @@
     &__title {
       border-color: #ff0000;
     }
+    .container {
+      .row > div {
+        padding: 0 5px 10px 5px;
+      }
+    }
   }
   @include media('screen', '<laptopM') {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  @include media('screen', '<mobileL') {
+    .flashsale {
+      &__title-left {
+        font-size: 1.6rem;
+        padding-left: 25px;
+      }
+      &__title-right {
+        font-size: 1.4rem;
+      }
+    }
+    .personalForYou {
+      .container {
+        padding: 0 5px;
+      }
+    }
   }
 }

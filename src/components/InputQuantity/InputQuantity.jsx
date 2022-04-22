@@ -1,5 +1,6 @@
 import Icons from 'assets/icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './inputQuantity.scss';
 
 const InputQuantity = ({ quantity }) => {
@@ -28,6 +29,12 @@ const InputQuantity = ({ quantity }) => {
     }
     setState(x);
   };
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setState(1);
+  }, [pathname]);
+
   return (
     <>
       <div className="input-quantity">

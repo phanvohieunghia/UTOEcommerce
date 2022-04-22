@@ -1,0 +1,12 @@
+@import 'assets/sass/responsive';
+
+#category {
+  @include media('screen', '<mobileL') {
+    .frame .container {
+      padding: 5px;
+      .row > div {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

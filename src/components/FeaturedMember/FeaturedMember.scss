@@ -1,6 +1,7 @@
 @import 'assets/sass/valuable';
 @import 'assets/sass/mixin';
 @import 'assets/sass/responsive';
+
 .fm {
   &__title {
     font-size: 1.6rem;
@@ -21,8 +22,8 @@
     }
   }
   &__logo {
-    width: 14%;
-    margin-right: 12px;
+    width: 20px;
+    margin-right: 6px;
     & img {
       width: 100%;
     }
@@ -33,7 +34,6 @@
   }
   &-downloadApp {
     @include flex(flex-start, center);
-
     @include media('screen', '<laptopM') {
       @include flex(center, flex-start, column);
       gap: 2px;
@@ -47,6 +47,16 @@
     }
     img:first-child {
       margin-right: 4px;
+    }
+  }
+}
+* {
+  @include media('screen', '<tabletL', '>tablet') {
+    .fm__text {
+      font-size: 1rem;
+    }
+    .fm__title {
+      font-size: 1.3rem;
     }
   }
 }

@@ -128,7 +128,7 @@ const Header = () => {
             {/* Cộng đồng */}
             <NavLink
               to="/community"
-              className="hd-main__item "
+              className="hd-main__item"
               onClick={handleMainHeader(1)}
             >
               <div className="hd-main__logo">

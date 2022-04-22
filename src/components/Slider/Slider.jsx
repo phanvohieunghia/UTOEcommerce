@@ -21,7 +21,7 @@ export default function Slider({
     <>
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        spaceBetween={20}
+        spaceBetween={6}
         effect={_effect === undefined ? '' : _effect}
         slidesPerView={_slides}
         // centeredSlides={true}

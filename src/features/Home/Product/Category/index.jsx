@@ -1,18 +1,22 @@
 import Footer from 'components/Footer/Footer';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import products from 'assets/data/Product.json';
 import { ChangeToSlug } from 'components/Common';
 import Items from 'components/Item/Item';
 import Pagination from 'components/Pagination';
+import './Category.scss';
+
 const Category = () => {
-  console.log('re-render');
+  const { pathname } = useLocation();
+  console.log(pathname);
+  const [state, setState] = useState(pathname);
+
   const [isMobile, setIsMobile] = useState(window.screen.width < 576);
   useEffect(() => {
     window.addEventListener('resize', (e) =>
       setIsMobile(e.currentTarget.screen.width < 576),
     );
-    console.log('re-render effect resize');
   }, [isMobile]);
 
   const { productSlug } = useParams();
@@ -33,6 +37,13 @@ const Category = () => {
   const switchPage = (page) => () => {
     setCurrentPage(page);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+    setState(state);
+    console.log(currentPage);
+  }, [state]);
+
   return (
     <div id="category" style={{ padding: '0 5px' }}>
       <section className="frame">

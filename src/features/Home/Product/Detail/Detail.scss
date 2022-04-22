@@ -1,4 +1,5 @@
 @import 'assets/sass/valuable';
+@import 'assets/sass/mixin';
 @import 'assets/sass/responsive';
 
 #product-detail {
@@ -56,12 +57,13 @@
         font-weight: 700;
         margin-right: 20px;
       }
-      .available {
-        padding-left: 16px;
+      .input-quantity {
+        margin-right: 16px;
       }
     }
     &-btn {
       margin: 24px 0;
+      @include flex('flex-start');
       button {
         padding: 6px 15px;
         font-size: 1.6rem;
@@ -141,6 +143,53 @@
   @include media('screen', '<mobileL') {
     .pd-img {
       height: 300px;
+    }
+    .pd-content {
+      padding: 0 10px 7px;
+    }
+    .pd-btn {
+      @include flex(center, center, column);
+      margin-bottom: 8px;
+      margin-top: 16px;
+      div {
+        width: 100%;
+        padding-bottom: 8px;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    .relative .container {
+      padding: 0 5px;
+      .row > div {
+        padding-bottom: 10px;
+      }
+    }
+    .pd-quantity {
+      > div {
+        margin-bottom: 5px;
+      }
+      @include flex(center, flex-start, column);
+      .input-quantity {
+        align-self: center;
+      }
+      .available {
+        align-self: flex-end;
+        font-size: 1.4rem;
+      }
+    }
+    .shop-detail {
+      padding-bottom: 5px;
+      .img {
+        width: 60px;
+      }
+      .content {
+        font-size: 1.2rem;
+        .btn {
+          padding: 2px 4px;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
   @include media('screen', '<mobileM') {
