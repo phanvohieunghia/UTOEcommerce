@@ -22,10 +22,11 @@
     }
   }
   &__logo {
-    width: 20px;
+    width: 30px;
     margin-right: 6px;
     & img {
       width: 100%;
+      border-radius: 50%;
     }
   }
   &__text {

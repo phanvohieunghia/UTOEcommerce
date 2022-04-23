@@ -1,11 +1,6 @@
 import React, { lazy, Suspense } from 'react';
-import { Routes, Route, useMatch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-// import NotFound from 'components/NotFound';
-// import EducationPage from 'features/Home/Education';
-// import HomePage from 'features/Home/Trading';
-// import CommunityPage from 'features/Home/Community';
-// import ServicesPage from 'features/Home/Services';
 import ProductDetailPage from 'features/Home/Product/Detail';
 import ContactPage from 'features/Home/Contact';
 import NewsPage from 'features/Home/News';

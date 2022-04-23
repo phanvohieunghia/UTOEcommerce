@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Rating from 'components/Rating';
 import { useParams } from 'react-router-dom';
 import Products from 'assets/data/Product.json';
 import Icons from 'assets/icons';
@@ -28,11 +29,12 @@ const ProductDetailPage = () => {
           <div className="pd-vote">
             <div className="pd-vote__item pd-vote__star">
               <span>0&nbsp;</span>
+              <Rating props="control" />
+              {/* <Icons.Star />
               <Icons.Star />
               <Icons.Star />
               <Icons.Star />
-              <Icons.Star />
-              <Icons.Star />
+              <Icons.Star /> */}
             </div>
             <div className="pd-vote__item">0 đánh giá</div>
             <div className="pd-vote__item">0 đã bán</div>
@@ -53,7 +55,7 @@ const ProductDetailPage = () => {
             <div>
               <button className="primary">
                 <Icons.CartPlus />
-                Thâm vào Giỏ Hảng
+                Thêm vào giỏ hảng
               </button>
             </div>
             <div>
@@ -96,6 +98,7 @@ const ProductDetailPage = () => {
                       name={data.name}
                       price={data.price}
                       address={data.address}
+                      control="readOnly"
                     />
                   </Link>
                 </div>

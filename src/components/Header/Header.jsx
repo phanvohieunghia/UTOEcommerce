@@ -103,7 +103,7 @@ const Header = () => {
       />
       <div className="container">
         <div className="row">
-          <div className="hd-left col-md-2 col">
+          <div className="hd-left col-md-2 col-6">
             <Link to="/">
               <img
                 className="hd-left__img col"
@@ -189,7 +189,7 @@ const Header = () => {
               {showUser && <UserBox />}
             </div>
           </div>
-          <div className="hd-right-mb col">
+          <div className="hd-right-mb col-6">
             {/* Search */}
             <div className="hd-right-mb__item" onClick={toggleSearchButton}>
               <Icons.MagnifyingGlass />

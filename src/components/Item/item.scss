@@ -56,7 +56,6 @@
       display: flex;
       align-items: center;
       svg {
-        height: 10px;
         fill: #faca51;
       }
     }
@@ -163,6 +162,7 @@
         $size-img: 60px;
         width: $size-img;
         height: $size-img;
+        border-radius: 50%;
       }
     }
     &-right {
@@ -221,10 +221,18 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     > div {
+      width: 100%;
+      margin: 0 5px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 6px 20px;
       font-size: 1.44rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #ddd;
+      }
       > svg {
         height: 14px;
       }
@@ -259,6 +267,7 @@
       margin-right: 15px;
       > img {
         height: 50px;
+        border-radius: 50%;
       }
     }
     &__content {

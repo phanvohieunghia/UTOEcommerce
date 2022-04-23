@@ -11,7 +11,10 @@ const FeaturedMember = () => {
           return (
             <div className="fm__item" key={i}>
               <div className="fm__logo">
-                <img src="/img/featuredMember/avatar.png" alt="error png" />
+                <img
+                  src={`https://i.pravatar.cc/150?img=${i}`}
+                  alt="error png"
+                />
               </div>
               <div className="fm__text">{data}</div>
             </div>

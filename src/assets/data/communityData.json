@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "avatarUser": "avatar",
-      "nameUser": "Unie",
+      "avatarUser": "/img/Education/reason/avatar.jpg",
+      "nameUser": "Unie 1",
       "dateToNow": "Khoảng 3 tháng trước",
       "titlePost": "Mặt nạ trắng da, ngăn ngừa lão hoá, thải độc cho da",
       "contentPost": "Sắp đến Tết rồi, cùng làm đẹp thôi các nàng ơi Shop mình còn nhiều mặt hàng về làm đep lắm nè, ghé xem và rinh về các sản phẩm ưng ý nhé !!! https://uniehouse.uto.vn/",
@@ -12,35 +12,46 @@
       "shareQuantity": 1,
       "commentList": [
         {
-          "avatarUser": "avatar",
+          "idUser": 50,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
           "nameUser": "Phạm Hoàng Tiến",
           "commentUser": "mặt nạ tinh bột trị mụn tốt"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 51,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phạm Bảo Hưng",
+          "commentUser": "Tôi là dũng sĩ diệt mồi"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 52,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phan Thiện Dương",
+          "commentUser": "Thông thạo mọi loại đàn"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 53,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Trần Phi Vũ",
+          "commentUser": "Fix mọi loại bug chỉ với 500k"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 54,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Nguyễn Minh Nhật",
+          "commentUser": "Giao tiếp tốt bằng ba ngôn ngữ: Tiếng việt, tiếng kinh, tiếng mẹ đẻ"
+        },
+        {
+          "idUser": 55,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Lê Quang Linh",
+          "commentUser": "Tìm người chơi hệ Táo"
         }
       ]
     },
     {
-      "avatarUser": "avatar",
-      "nameUser": "Unie",
+      "avatarUser": "/img/Education/reason/avatar.jpg",
+      "nameUser": "Unie 2",
       "dateToNow": "Khoảng 3 tháng trước",
       "titlePost": "Mặt nạ trắng da, ngăn ngừa lão hoá, thải độc cho da",
       "contentPost": "Sắp đến Tết rồi, cùng làm đẹp thôi các nàng ơi Shop mình còn nhiều mặt hàng về làm đep lắm nè, ghé xem và rinh về các sản phẩm ưng ý nhé !!! https://uniehouse.uto.vn/",
@@ -50,35 +61,34 @@
       "shareQuantity": 1,
       "commentList": [
         {
-          "avatarUser": "avatar",
+          "idUser": 50,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
           "nameUser": "Phạm Hoàng Tiến",
           "commentUser": "mặt nạ tinh bột trị mụn tốt"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 51,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phạm Bảo Hưng",
+          "commentUser": "Tôi là dũng sĩ diệt mồi"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 52,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phan Thiện Dương",
+          "commentUser": "Thông thạo mọi loại đàn"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
-        },
-        {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 53,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Trần Phi Vũ",
+          "commentUser": "Fix mọi loại bug chỉ với 500k"
         }
       ]
     },
     {
-      "avatarUser": "avatar",
-      "nameUser": "Unie",
+      "avatarUser": "/img/Education/reason/avatar.jpg",
+      "nameUser": "Unie 3",
       "dateToNow": "Khoảng 3 tháng trước",
       "titlePost": "Mặt nạ trắng da, ngăn ngừa lão hoá, thải độc cho da",
       "contentPost": "Sắp đến Tết rồi, cùng làm đẹp thôi các nàng ơi Shop mình còn nhiều mặt hàng về làm đep lắm nè, ghé xem và rinh về các sản phẩm ưng ý nhé !!! https://uniehouse.uto.vn/",
@@ -88,35 +98,34 @@
       "shareQuantity": 1,
       "commentList": [
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 52,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phan Thiện Dương",
+          "commentUser": "Thông thạo mọi loại đàn"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 53,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Trần Phi Vũ",
+          "commentUser": "Fix mọi loại bug chỉ với 500k"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 54,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Nguyễn Minh Nhật",
+          "commentUser": "Giao tiếp tốt bằng ba ngôn ngữ: Tiếng việt, tiếng kinh, tiếng mẹ đẻ"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
-        },
-        {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 55,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Lê Quang Linh",
+          "commentUser": "Tìm người chơi hệ Táo"
         }
       ]
     },
     {
-      "avatarUser": "avatar",
-      "nameUser": "Unie",
+      "avatarUser": "/img/Education/reason/avatar.jpg",
+      "nameUser": "Unie 4",
       "dateToNow": "Khoảng 3 tháng trước",
       "titlePost": "Mặt nạ trắng da, ngăn ngừa lão hoá, thải độc cho da",
       "contentPost": "Sắp đến Tết rồi, cùng làm đẹp thôi các nàng ơi Shop mình còn nhiều mặt hàng về làm đep lắm nè, ghé xem và rinh về các sản phẩm ưng ý nhé !!! https://uniehouse.uto.vn/",
@@ -126,29 +135,28 @@
       "shareQuantity": 1,
       "commentList": [
         {
-          "avatarUser": "avatar",
+          "idUser": 50,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
           "nameUser": "Phạm Hoàng Tiến",
           "commentUser": "mặt nạ tinh bột trị mụn tốt"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 51,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Phạm Bảo Hưng",
+          "commentUser": "Tôi là dũng sĩ diệt mồi"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 54,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Nguyễn Minh Nhật",
+          "commentUser": "Giao tiếp tốt bằng ba ngôn ngữ: Tiếng việt, tiếng kinh, tiếng mẹ đẻ"
         },
         {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
-        },
-        {
-          "avatarUser": "avatar",
-          "nameUser": "Phạm Hoàng Tiến",
-          "commentUser": "mặt nạ tinh bột trị mụn tốt"
+          "idUser": 55,
+          "avatarUser": "/img/Education/reason/avatar.jpg",
+          "nameUser": "Lê Quang Linh",
+          "commentUser": "Tìm người chơi hệ Táo"
         }
       ]
     }

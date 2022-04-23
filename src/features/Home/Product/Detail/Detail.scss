@@ -35,8 +35,15 @@
         display: flex;
         align-items: center;
         svg {
-          height: 16px;
+          // height: 16px;
           fill: #faca51;
+        }
+        .MuiRating-root {
+          svg {
+            $local-size: 22px;
+            height: $local-size;
+            font-size: $local-size;
+          }
         }
       }
     }

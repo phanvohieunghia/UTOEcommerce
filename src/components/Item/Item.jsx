@@ -1,9 +1,16 @@
 import React from 'react';
 import Icons from 'assets/icons';
+import Rating from 'components/Rating';
 import './item.scss';
 import { FormatPrice } from 'components/Common';
 const Item1 = (props) => {
-  const { img = '', name = '', price = '', address = '' } = props;
+  const {
+    img = '',
+    name = '',
+    price = '',
+    address = '',
+    readOnly = '',
+  } = props;
   return (
     <div className="item1">
       <div className="item1__img">
@@ -17,12 +24,13 @@ const Item1 = (props) => {
         </div>
         <div className="item1__footer">
           <div className="item1__footer-rating">
+            <Rating props="readOnly" />
+            {/* <Icons.Star />
             <Icons.Star />
             <Icons.Star />
             <Icons.Star />
-            <Icons.Star />
-            <Icons.Star />
-            <span>(0)</span>
+            <Icons.Star /> */}
+            <span style={{ fontSize: '1.2rem' }}> (0)</span>
           </div>
           <div className="item1__footer-address">{address}</div>
         </div>
@@ -57,7 +65,7 @@ const Item3 = ({ img, name, description }) => {
   return (
     <div className="item3">
       <div className="item3__img">
-        <img src={'/img/Education/reason/' + img + '.jpg'} alt="error png" />
+        <img src={img} alt="error png" />
       </div>
       <div className="item3__name">{name}</div>
       <div className="item3__description">{description}</div>
@@ -69,10 +77,7 @@ const Item4 = ({ ...rest }) => {
     <div className="item4">
       <div className="item4-head">
         <div className="item4-head__avatarUser">
-          <img
-            src={'/img/Community/' + rest.avatarUser + '.png'}
-            alt="error png"
-          />
+          <img src={rest.avatarUser} alt="error png" />
         </div>
         <div className="item4-head-right">
           <div className="item4-head-right__name">{rest.nameUser}</div>
@@ -120,7 +125,7 @@ const Item4 = ({ ...rest }) => {
           <div className="item4-listItem__item" key={i}>
             <div className="item4-listItem__avatar">
               <img
-                src={'/img/Community/' + data.avatarUser + '.png'}
+                src={`https://i.pravatar.cc/150?img=%${data.idUser}`}
                 alt="error png"
               />
             </div>

@@ -107,6 +107,7 @@ const HomePage = () => {
                     price={data.price}
                     address={data.address}
                     folder="product"
+                    control="readOnly"
                   />
                 </div>
               );
@@ -140,7 +141,9 @@ const Slider2Item = ({ name, img }) => {
   return (
     <div className="slider2__content">
       <div className="slider2__img">
-        <img src={'/img/Ecommerce/slider2/' + img + '.png'} alt="error png" />
+        <div>
+          <img src={'/img/Ecommerce/slider2/' + img + '.png'} alt="error png" />
+        </div>
       </div>
       <div className="slider2__name">{name}</div>
     </div>

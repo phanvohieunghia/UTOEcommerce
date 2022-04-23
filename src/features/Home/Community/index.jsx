@@ -9,7 +9,7 @@ const CommunityPage = () => {
         return (
           <section className="frame" key={i}>
             <Items.Item4
-              avatarUser={data.avatarUser}
+              avatarUser={`https://i.pravatar.cc/150?img=${i}`}
               nameUser={data.nameUser}
               dateToNow={data.dateToNow}
               titlePost={data.titlePost}
