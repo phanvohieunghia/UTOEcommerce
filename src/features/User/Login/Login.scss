@@ -1,0 +1,155 @@
+@import 'assets/sass/mixin';
+@import 'assets/sass/valuable';
+@import 'assets/sass/responsive';
+
+#login {
+  height: 100vh;
+  @include flex;
+  background: url('/assets/images/Login/background_v2.jpg') no-repeat center
+    center / cover;
+  position: relative;
+  .primer {
+    @include positionCustom(absolute);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .main {
+    @include flex;
+    width: 425px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    box-shadow: $box-shadow-type-4;
+    z-index: 1;
+    > div {
+      flex: 1;
+    }
+    .logo {
+      padding-top: 30px;
+      text-align: center;
+      img {
+        width: 200px;
+      }
+    }
+    .slogan {
+      font-weight: 500;
+      background: linear-gradient(90deg, #2681d1, #52cbf7);
+      -webkit-background-clip: text;
+      text-align: center;
+      font-size: 2rem;
+      color: transparent;
+      padding-bottom: 30px;
+    }
+    .login-type {
+      input,
+      button,
+      > div {
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 14px 10px;
+        border-left: 4px solid $main-color-opacity-60;
+        font-weight: 500;
+        box-shadow: $box-shadow-type-3;
+      }
+      input {
+        outline: none;
+        &:focus {
+          border-left: 4px solid $hover-main-color;
+        }
+      }
+      > div {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        @include flex;
+        &:hover {
+          border-color: $main-color;
+        }
+        img {
+          width: 24px;
+          margin-right: 12px;
+        }
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .forgot {
+      font-size: 1.3rem;
+      padding-bottom: 6px;
+      font-weight: 400;
+      text-align: right;
+      span {
+        cursor: pointer;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    .username {
+      padding-bottom: 10px;
+    }
+    .password {
+      padding-bottom: 6px;
+    }
+    .login button {
+      background-color: $main-color;
+      color: #fff;
+      &:hover {
+        background-color: $hover-main-color;
+      }
+    }
+    .signup {
+      padding: 12px 0 14px;
+      font-size: 1.3rem;
+      text-align: center;
+      span {
+        font-weight: 600;
+        color: $main-color;
+        cursor: pointer;
+        &:hover {
+          color: $hover-main-color;
+        }
+      }
+    }
+    .divider {
+      position: relative;
+      hr {
+        margin: 20px 0 50px;
+        color: #444;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 0 10px;
+        font-size: 1.3rem;
+      }
+    }
+    .google {
+      margin-bottom: 12px;
+    }
+  }
+  @include media('screen', '<mobileL') {
+    .main {
+      @include positionCustom(fixed);
+      width: unset;
+      border-radius: unset;
+      padding: 20px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .logo {
+        padding-top: 0;
+        img {
+          width: 160px;
+        }
+      }
+      .slogan {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import ContactPage from 'features/Home/Contact';
 import NewsPage from 'features/Home/News';
 import Loading from 'components/Loading';
 import ProductCategoryPage from 'features/Home/Product/Category';
+import Login from 'features/User/Login';
 
 const Home = lazy(() => {
   return new Promise((resolve) => {
@@ -115,6 +116,14 @@ const Router = () => {
             }
           />
         </Route>
+        <Route
+          path="/user/login"
+          element={
+            <Suspense fallback={<Loading />}>
+              <Login />
+            </Suspense>
+          }
+        />
         <Route
           path="*"
           element={

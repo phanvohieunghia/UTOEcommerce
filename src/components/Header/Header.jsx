@@ -225,12 +225,12 @@ const UserBox = () => {
   };
   return (
     <div className="user-box" onClick={handleProgation}>
-      <div className="user-box__item">
+      <Link className="user-box__item" to="/user/login">
         <div className="user-box-left">
           <Icons.User />
         </div>
         <div className="user-box-right">{Data.user.login}</div>
-      </div>
+      </Link>
       <div className="user-box__item">
         <div className="user-box-left">
           <Icons.Building />
