@@ -24,7 +24,8 @@ const Login = () => {
             <button>ĐĂNG NHẬP</button>
           </div>
           <div className="signup">
-            Nếu bạn chưa có mật khẩu?<span> Đăng ký ngay</span>
+            <span>Nếu bạn chưa có mật khẩu?</span>
+            <span> Đăng ký ngay</span>
           </div>
           <div className="divider">
             <hr />

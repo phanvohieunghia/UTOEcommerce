@@ -21,7 +21,7 @@
     font-size: 1.6rem;
     box-shadow: $box-shadow-type-4;
     z-index: 1;
-    > div {
+    .container {
       flex: 1;
     }
     .logo {
@@ -103,7 +103,7 @@
       padding: 12px 0 14px;
       font-size: 1.3rem;
       text-align: center;
-      span {
+      span:last-child {
         font-weight: 600;
         color: $main-color;
         cursor: pointer;
@@ -138,9 +138,6 @@
       width: unset;
       border-radius: unset;
       padding: 20px;
-      ::-webkit-scrollbar {
-        width: 0;
-      }
       .logo {
         padding-top: 0;
         img {
@@ -150,6 +147,11 @@
       .slogan {
         padding-bottom: 20px;
       }
+    }
+  }
+  @include media('screen', '<mobileS') {
+    .signup {
+      @include flex(center, center, column);
     }
   }
 }
